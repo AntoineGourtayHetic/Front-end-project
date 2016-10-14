@@ -1,0 +1,26 @@
+{
+  "name": "front-end-project",
+  "version": "1.0.0",
+  "description": "School project ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-a-l/front-end-project.git"
+  },
+  "author": "M-A-L",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m-a-l/front-end-project/issues"
+  },
+  "homepage": "https://github.com/m-a-l/front-end-project#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.5.1",
+    "browser-sync": "^2.17.3",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sass": "^2.3.2"
+  }
+}
