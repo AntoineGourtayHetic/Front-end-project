@@ -9,7 +9,7 @@ composer.phar
 /vendor/
 /config/
 /sql-calls/
-*/node_modules/*
+node_modules/*
 */cache/*
 */images/*
 *.png
