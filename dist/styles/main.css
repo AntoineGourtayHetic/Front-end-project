@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 body {
   background-color: red; }
 
-.gogo {
-  display: none; }
-=======
 section.container {
   width: 100vw;
   height: 100vh;
@@ -103,4 +99,3 @@ section.container {
     height: 100vh;
     display: inline-block;
     border: 1px solid black; }
->>>>>>> e2280088cbf8ff6228ef243baa5013bcd756e807
