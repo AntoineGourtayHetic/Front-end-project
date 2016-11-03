@@ -5,6 +5,7 @@ var arrows = document.querySelectorAll('.arrow'),
 
 window.addEventListener('resize', updateUserViewPort);
 
+// SET LISTENERS
 for(var i = 0; i < arrows.length; i++) {
     arrows[i].addEventListener('click', moveView);
 }
