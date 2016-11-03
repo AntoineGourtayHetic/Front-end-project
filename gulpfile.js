@@ -9,7 +9,7 @@ var processors = [
 ];
 
 gulp.task('scss', function() {
-    return gulp.src('app/styles/*.scss')
+    return gulp.src('app/styles/main.scss')
         .pipe(sass())
         .pipe(postcss(processors))
         .pipe(gulp.dest('dist/styles'))
