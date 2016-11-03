@@ -8,6 +8,7 @@
 composer.phar
 /vendor/
 /.idea/
+.idea/
 /config/
 /sql-calls/
 node_modules/*
