@@ -1,0 +1,29 @@
+.testimony {
+  width: 90vw;
+  .testimony__top {
+    display: flex;
+    font-size: 1vw;
+    color: #FFFFFF;
+
+    .testimony__top--img {
+      width           : 10vw;
+      height          : 10vw;
+      background-image: url(../images/img_profil.png);
+      background-size : cover;
+    }
+
+    .testimony__top--txt {
+
+    }
+
+  }
+
+  .testimony__bottom {
+
+    p {
+
+    }
+
+  }
+
+}

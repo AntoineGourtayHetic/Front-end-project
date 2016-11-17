@@ -4,57 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="dist/styles/reset.css">
     <link rel="stylesheet" href="dist/styles/main.css">
     <title>Document</title>
     <script async src="dist/scripts/main.js"></script>
 </head>
 <body>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:0; height:0; font-size:0;">
+    <defs>
+        <symbol id="arrow" viewBox="0 0 50 50">
+                <g transform="translate(-13.000000, -322.000000)">
+                    <path d="M62.9078261,341.808078 L40.1755972,322.760278 C39.7584921,322.41269 39.2023519,322.273655 38.7157293,322.273655 C38.2291067,322.273655 37.6729665,322.41269 37.2558614,322.760278 L14.5236326,341.808078 C13.5503873,342.572771 13.4808698,344.032639 14.2455625,344.936367 C15.0102552,345.909612 16.4701231,345.979129 17.3738509,345.214437 L38.7157293,327.417952 L60.0576078,345.214437 C61.030853,345.979129 62.4212034,345.840094 63.1858961,344.936367 C64.0201064,343.963121 63.8810713,342.572771 62.9078261,341.808078 L62.9078261,341.808078 Z" id="Shape-Copy" transform="translate(38.730000, 334.003655) scale(-1, 1) translate(-38.730000, -334.003655) "></path>
+                </g>
+        </symbol>
+        <filter id="arrow_hover" >
+            <feGaussianBlur stdDeviation="1"/>
+        </filter>
+    </defs>
+</svg>
 <section class="container">
-    <div class="navArrow">
-        <div class="arrow navArrow__topArrow"></div>
-    </div>
-    <div class="navArrow">
-        <div class="active arrow navArrow__rightArrow"></div>
-    </div>
-    <div class="navArrow">
-        <div class="active arrow navArrow__bottomArrow"></div>
-    </div>
-    <div class="navArrow">
-        <div class="active arrow navArrow__leftArrow"></div>
-    </div>
 
-    <div class="container__views home">
+    <svg class="navArrow">
+        <use xlink:href="#arrow" class="arrow navArrow__topArrow"></use>
+    </svg>
 
-        <!--Line 1-->
+    <svg class="navArrow">
+        <use xlink:href="#arrow" class="arrow navArrow__rightArrow"></use>
+    </svg>
 
-        <div class="viewsLine viewsLine1">
-            <div class="viewsLine1__view viewsLine1__view1">
+    <svg class="navArrow">
+        <use xlink:href="#arrow" class="arrow navArrow__bottomArrow"></use>
+    </svg>
+
+    <svg class="navArrow">
+        <use xlink:href="#arrow" class="arrow navArrow__leftArrow"></use>
+    </svg>
+
+
+    <!-- MENU -->
+
+
+    <div class="menu-icon menu-icon-closed"></div>
+
+    <div class="menu menu-closed">
+        <nav>
+            <ul>
+                <li>HOME</li>
+                <li>TEMOIGNAGE</li>
+                <li>TOURIST</li>
+                <li>FIREWATCHER</li>
+                <li>APPLY</li>
+                <li>RESERVATION</li>
+            </ul>
+        </nav>
+    </div>
+    <!-- VIEWS -->
+    <div class="container__views">
+        <!-- LINE 1 -->
+        <div class="viewsLine1 viewsLine">
+            <div class="viewsLine1__view viewsLine1__view1 view">
+                <div class="testimony">
+                    <div class="testimony__top">
+                        <div class="testimony__top--img"></div>
+                        <div class="testimony__top--txt">
+                            <p>Winnie Allen</p>
+                            <p>Tourist at Yellowstone</p>
+                        </div>
+                    </div>
+                    <div class="testimony__bottom">
+                        <p>“In the history of modern astronomy, there is probably no one greater leap forward than the building and launch of the space telescope known as the Hubble.”</p>
+                    </div>
+                </div>
+                <div class="testimony">
+                    <div class="testimony__top">
+                        <div class="testimony__top--img"></div>
+                        <div class="testimony__top--txt">
+                            <p>Winnie Allen</p>
+                            <p>Tourist at Yellowstone</p>
+                        </div>
+                    </div>
+                    <div class="testimony__bottom">
+                        <p>“In the history of modern astronomy, there is probably no one greater leap forward than the building and launch of the space telescope known as the Hubble.”</p>
+                    </div>
+                </div>
+            </div>
+            <div class="viewsLine1__view viewsLine1__view2 view">
+                <div class="firewatcher">
+                    <div class="firewatcher__logo">
+
+                    </div>
+                    <div class="firewatcher__invitation">
+                        <p>COME VISIT</p>
+                        <p>OUR PARCS</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="viewsLine1__view viewsLine1__view3 view">
+            </div>
+        </div>
+
+        <!--LINE 2-->
+
+        <div class="viewsLine2 viewsLine">
+            <div class="viewsLine2__view viewsLine2__view1 view">
                 <span>text l2 v1</span>
             </div>
-
-            <div class="viewsLine1__view viewsLine1__view2">
-                <span>text l1 v2</span>
+            <div class="viewsLine2__view viewsLine2__view2 view">
+                <div class="home">
+                    <div class="home__tourist">Tourist</div>
+                    <div class="home__title">
+                        <h3>WELCOME TO</h3>
+                        <h2>YOSEMITE</h2>
+                        <h2>NATIONAL PARK</h2>
+                    </div>
+                        <div class="home__firewatcher">Firewatcher</div>
+                </div>
             </div>
 
-            <div class="viewsLine1__view viewsLine1__view3">
+            <div class="viewsLine2__view viewsLine2__view3 view">
                 <span>text l1 v3</span>
             </div>
         </div>
 
-        <!--Line 2-->
+        <!--LINE 3-->
 
-        <div class="viewsLine viewsLine2">
-            <div class="viewsLine2__view viewsLine2__view1">
-                <span>text l2 v1</span>
+        <div class="viewsLine3 viewsLine">
+            <div class="viewsLine3__view viewsLine3__view1 view">
+                <span>text l3 v1</span>
             </div>
 
-            <div class="viewsLine2__view viewsLine2__view2">
-                <span>text l2 v2</span>
+            <div class="viewsLine3__view viewsLine3__view2 view">
+                <span>text l3 v2</span>
             </div>
 
-            <div class="viewsLine2__view viewsLine2__view3">
-                <span>text l2 v3</span>
+            <div class="viewsLine3__view viewsLine3__view3 view">
+                <span>text l3 v3</span>
             </div>
         </div>
 

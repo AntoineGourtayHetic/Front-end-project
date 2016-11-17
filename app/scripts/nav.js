@@ -1,6 +1,10 @@
-var arrows         = document.querySelectorAll('.arrow'),
-    viewsContainer = document.querySelector('.container__views'),
-    userViewWidth  = updateUserViewPort('width'),
+const arrows          = document.querySelectorAll('.arrow'),
+      arrowsContainer = document.querySelectorAll('.navArrow'),
+      viewsContainer  = document.querySelector('.container__views'),
+      touristBtn      = document.querySelector('.home__tourist'),
+      firewatcherBtn  = document.querySelector('.home__firewatcher');
+
+let userViewWidth  = updateUserViewPort('width'),
     userViewHeight = updateUserViewPort('height'),
     userTouchStartCoord = {
         clientX: 0,
@@ -9,6 +13,10 @@ var arrows         = document.querySelectorAll('.arrow'),
     userTouchMoveCoord = {
         clientX: 0,
         clientY: 0
+    },
+    viewCoords = {
+        x: 1,
+        y: 2,
     };
 
 //DETECT WHEN THE USER RESIZES HIS WINDOW TO UPDATE THE VARIABLES
@@ -16,12 +24,12 @@ window.addEventListener('resize', updateUserViewPort);
 // DETECT WHEN THE USER PRESSES A KEY TO MOVE THE VIEWS
 window.addEventListener('keyup', keyboardNav);
 // DETECT WHEN THE USER STARTS TOUCHING HIS SCREEN
-window.addEventListener('touchstart', function(e) {
+window.addEventListener('touchstart', (e) => {
     userTouchStartCoord.clientX = e.touches[0].clientX;
     userTouchStartCoord.clientY = e.touches[0].clientY;
 });
 // DETECT WHEN THE USER MOVES HIS FINGER ON HIS SCREEN
-window.addEventListener('touchmove', function(e) {
+window.addEventListener('touchmove', (e) => {
 
     userTouchMoveCoord.clientX = e.touches[0].clientX;
     userTouchMoveCoord.clientY = e.touches[0].clientY;
@@ -30,15 +38,30 @@ window.addEventListener('touchmove', function(e) {
 window.addEventListener('touchend', touchNav);
 
 // SET LISTENERS ON THE ARROWS
-for(var i = 0; i < arrows.length; i++) {
-    arrows[i].addEventListener('click', moveView);
+setArrows();
+function setArrows() {
+    arrows.forEach((arrow, i) => {
+        arrow.addEventListener('click', moveView);
+        arrow.style.transform = setTransforms(i);
+    });
 }
+
+// SET LISTENERS ON THE BTNS
+
+touristBtn.addEventListener('click', btnNav);
+firewatcherBtn.addEventListener('click', btnNav);
+
+
 
 
 // FUNCTION TO MOVE THE VIEWS CONTAINER
 function moveView(e) {
 
-    var target;
+    let checkUserNav = checkUserNav(viewCoords);
+
+    if(checkUserNav !== false) console.log('ok');
+
+    let target;
     // IF THE USER USES THE HTML ARROWS
     if(typeof e === 'object') {
         // GET THE LAST OF ITS CLASS TO GUESS WHICH ARROW HE CLICKED
@@ -49,7 +72,7 @@ function moveView(e) {
     }
 
     // GET THE CSS VALUES OF THE ARROW
-    var viewsContainerComputedStyle = window.getComputedStyle(viewsContainer),
+    let viewsContainerComputedStyle = window.getComputedStyle(viewsContainer),
 
         // GET THE TRANSLATE VALUE VIA FUNCTION getTranslateValue (IT RETURNS A MATRIX())
         translateValues = getTranslateValue(viewsContainerComputedStyle.getPropertyValue('transform'));
@@ -57,6 +80,7 @@ function moveView(e) {
     switch(target) {
 
         case 'navArrow__topArrow':
+        case 'home__tourist'    :
             viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + parseInt(translateValues[4] ) + ', ' + (parseInt(translateValues[5]) + userViewHeight) + ')';
             break;
 
@@ -65,6 +89,7 @@ function moveView(e) {
             break;
 
         case 'navArrow__bottomArrow':
+        case 'home__firewatcher'    :
             viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + parseInt(translateValues[4]) + ', ' + parseInt(translateValues[5] - userViewHeight) + ')';
             break;
 
@@ -73,7 +98,7 @@ function moveView(e) {
             break;
 
     }
-
+    updateViewCoords(target);
 }
 
 // RETURN AN ARRAY OF THE TRANSLATE VALUES
@@ -100,7 +125,7 @@ function updateUserViewPort(arg) {
 function touchNav(e) {
 
 
-    var redirect = redirectTouchNav();
+    let redirect = redirectTouchNav();
 
     switch(redirect) {
 
@@ -149,7 +174,7 @@ function redirectTouchNav() {
 // FUNCTION TO HANDLE KEYBOARD NAV
 function keyboardNav(e) {
     // GET KEYCODE OF PRESSED KEY
-    var key = e.keyCode;
+    const key = e.keyCode;
 
     switch(key) {
 
@@ -158,28 +183,147 @@ function keyboardNav(e) {
         case 38:
         case 90:
             moveView('navArrow__topArrow');
-            break;
+        break;
 
         // LEFT AND Q
 
         case 37:
         case 81:
             moveView('navArrow__leftArrow');
-            break;
+        break;
 
         // DOWN AND S
 
         case 40:
         case 83:
             moveView('navArrow__bottomArrow');
-            break;
+        break;
 
         // RIGHT AND D
 
         case 39:
         case 68:
             moveView('navArrow__rightArrow');
-            break;
+        break;
 
     }
+}
+
+function updateViewCoords(checker) {
+    switch(checker) {
+
+        case 'navArrow__topArrow':
+        case 'home__tourist'     :
+           viewCoords.y++;
+        break;
+
+        case 'navArrow__bottomArrow':
+        case 'home__firewatcher'    :
+            viewCoords.y--;
+        break;
+
+        case 'navArrow__rightArrow':
+            viewCoords.x++;
+        break;
+
+        case 'navArrow__leftArrow':
+            viewCoords.x--;
+        break;
+    }
+    console.log(viewCoords);
+}
+
+function checkUserNav(coords) {
+
+    if(coords.x === 2) {
+        arrows[1].parentNode.removeChild(arrows[1]);
+        delete arrows[1];
+        return false;
+    }
+
+    if(coords.x === 0) {
+        arrows[3].parentNode.removeChild(arrows[3]);
+        delete arrows[3];
+        return false;
+    }
+
+    if(coords.y === 1) {
+        arrows[2].parentNode.removeChild(arrows[2]);
+        delete arrows[2];
+        return false;
+    }
+
+    if(coords.y === 3) {
+        arrows[0].parentNode.removeChild(arrows[0]);
+        delete arrows[0];
+        return false;
+    }
+
+
+    let arrowElem;
+
+    for(let i = 0; i < arrowsContainer.length; i++) {
+
+        if(arrowsContainer[i].children.length > 0 && arrowElem !== null) {
+            arrowElem = arrowsContainer[i].children[0].cloneNode(true);
+            break;
+        }
+    }
+
+
+    arrowsContainer.forEach((arrowContainer, id) => {
+        if(arrowContainer.children.length == 0) {
+            arrows[id] = arrowElem;
+            arrowContainer.appendChild(arrows[id]);
+            setTransforms(id);
+            arrows[id].className = setArrowClass(id);
+        }
+    });
+}
+
+function setTransforms(id) {
+    switch(id) {
+
+        case 1:
+            return "rotate(90deg)";
+        break;
+
+        case 2:
+            return "rotate(180deg)";
+        break;
+
+        case 3:
+            return "rotate(-90deg)";
+        break;
+
+    }
+}
+
+function setArrowClass(id) {
+    switch(id) {
+
+        case 0:
+            return "arrow navArrow__topArrow";
+        break;
+
+        case 1:
+            return "arrow navArrow__rightArrow";
+        break;
+
+        case 2:
+            return "arrow navArrow__bottomArrow";
+        break;
+
+        case 3:
+            return "arrow navArrow__leftArrow";
+        break;
+
+    }
+}
+
+function btnNav(e) {
+
+    const btnClass = e.target.classList[0];
+
+    moveView(btnClass);
 }
