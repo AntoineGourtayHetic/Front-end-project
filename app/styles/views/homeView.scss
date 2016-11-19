@@ -1,0 +1,4 @@
+.homeViewLine__view {
+  background-image : url(../images/home_bg.jpg);
+  @include viewsLine();
+}

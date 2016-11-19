@@ -1,0 +1,50 @@
+.home {
+  width           : 100vw;
+  height          : 100vh;
+  display         : flex;
+  flex-direction  : column;
+  background-color: rgba(0, 0, 0, 0.2);
+  align-items     : center;
+  justify-content : center;
+
+
+  .home__title {
+    width           : 80vw;
+    height          : 40vh;
+    display         : flex;
+    font-family     : "FuturaBold", sans-serif;
+    color           : #FFFFFF;
+    flex-direction  : column;
+    align-items     : center;
+    justify-content : center;
+
+    h3 {
+      font-size: 3vw;
+    }
+
+    h2 {
+      font-size: 5vw;
+    }
+  }
+  
+  .home__tourist,
+  .home__firewatcher {
+    width              : 50vw;
+    height             : 10vh;
+    cursor             : pointer;
+    font-family        : "FuturaBold", sans-serif;
+    display            : flex;
+    flex-direction     : column;
+    align-items        : center;
+    justify-content    : center;
+    font-size          : 2vw;
+    color              : #FEBB34;
+    border             : 1px solid #FEBB34;
+    transition-duration: 0.5s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+}

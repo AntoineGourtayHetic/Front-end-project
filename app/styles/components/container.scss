@@ -1,0 +1,40 @@
+section.container {
+  width           : 100vw;
+  height          : 100vh;
+  position        : fixed;
+  overflow        : hidden;
+  transform       : translateY(-15px);
+
+  .container__views {
+    width              : 999vw;
+    overflow           : hidden;
+    transform          : translateX(-300vw);
+    transition-duration: 0.3s;
+
+    .viewsLine {
+      height        : 100vh;
+      font-size     : 0;
+      display       : inline-block;
+      vertical-align: top;
+
+    }
+
+  }
+
+  .view {
+    @include viewsLine();
+  }
+
+  .viewsLine3__view3 {
+    background-color: #0000FF;
+  }
+
+  .viewsLine3__view1 {
+    background-color: #FF0000;
+  }
+
+  .viewsLine3__view2 {
+    background-color: #FFFFFF;
+  }
+
+}
