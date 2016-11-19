@@ -1,15 +1,15 @@
-.viewsLine3 {
+.touristsViewsLine {
 
-  .viewsLine3__view {
+  .touristsViewsLine__view {
     @include viewsLine();
   }
 
-  .viewsLine3__view2 {
-    background-image: url(../images/home_firewatcher.jpg);
+  .touristsViewsLine__view2 {
+    background-image: url(../../../../medias/images/doIHaveSpirit_bg.jpg);
     background-size: cover;
   }
 
-  .viewsLine3__view3 {
+  .touristsViewsLine__view3 {
     @include whatWillIDo();
   }
 }

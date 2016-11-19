@@ -8,13 +8,13 @@
 }
 
 .menu-icon-closed {
-  background-image: url(../images/menu-closed.png);
+  background-image: url(../../../medias/images/menu-closed.png);
   width           : 25px;
   height          : 19px;
 }
 
 .menu-icon-opened {
-  background-image: url(../images/menu-opened.png);
+  background-image: url(../../../medias/images/menu-opened.png);
   width           : 25px;
   height          : 25px;
 }
@@ -59,7 +59,7 @@
   .menu__logo {
     width            : 40vw;
     height           : 40vw;
-    background       : url(../images/menu_bg.svg) no-repeat;
+    background       : url(../../../medias/images/menu_bg.svg) no-repeat;
     background-size  : cover;
     bottom           : -20vw;
     margin-left      : 0;
