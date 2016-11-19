@@ -79,23 +79,14 @@ function moveView(e) {
 
     switch(target) {
 
-        case 'navArrow__topArrow':
-        case 'home__tourist'    :
-            viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + parseInt(translateValues[4] ) + ', ' + (parseInt(translateValues[5]) + userViewHeight) + ')';
-            break;
 
         case 'navArrow__rightArrow':
             viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) - userViewWidth) + ', ' + parseInt(translateValues[5]) + ')';
-            break;
-
-        case 'navArrow__bottomArrow':
-        case 'home__firewatcher'    :
-            viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + parseInt(translateValues[4]) + ', ' + parseInt(translateValues[5] - userViewHeight) + ')';
-            break;
+        break;
 
         case 'navArrow__leftArrow':
             viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) + userViewWidth) + ', ' + parseInt(translateValues[5]) + ')';
-            break;
+        break;
 
     }
     updateViewCoords(target);
@@ -286,15 +277,11 @@ function checkUserNav(coords) {
 function setTransforms(id) {
     switch(id) {
 
-        case 1:
+        case 0:
             return "rotate(90deg)";
         break;
 
-        case 2:
-            return "rotate(180deg)";
-        break;
-
-        case 3:
+        case 1:
             return "rotate(-90deg)";
         break;
 
