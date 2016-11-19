@@ -13,8 +13,6 @@ composer.phar
 /sql-calls/
 node_modules/*
 */cache/*
-*.png
-*.jpeg
 *.codekit
 /dist/
 
