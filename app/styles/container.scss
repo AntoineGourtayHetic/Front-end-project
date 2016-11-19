@@ -6,14 +6,16 @@ section.container {
   transform       : translateY(-15px);
 
   .container__views {
-    width              : 310vw;
+    width              : 999vw;
     overflow           : hidden;
-    transform          : translateX(-100vw) translateY(-100vh);
+    transform          : translateX(-300vw);
     transition-duration: 0.3s;
 
     .viewsLine {
-      height: 100vh;
-      font-size: 0;
+      height        : 100vh;
+      font-size     : 0;
+      display       : inline-block;
+      vertical-align: top;
 
     }
 

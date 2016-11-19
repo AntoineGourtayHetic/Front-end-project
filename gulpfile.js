@@ -4,7 +4,6 @@ var gulp         = require('gulp'),
     sass         = require('gulp-sass'),
     postcss      = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
-    concat       = require('gulp-concat'),
     sync         = require('browser-sync').create();
 
 var processors = [

@@ -37,19 +37,35 @@
   width              : 90vw;
   height             : 100vh;
   margin-left        : 10vw;
-  background-color   : #000000;
+  background-color   : #95370E;
   transition-duration: 0.3s;
   opacity            : 0.75;
 
   nav {
-    font-family     : "Formata-MediumCondensed.otf";
+    font-family     : "FuturaBold", sans-serif;
     display         : flex;
-    align-items     :center;
+    align-items     : center;
     margin-top      : 2vw;
-    ul li {
-      font-size: 3em;
+    margin-left     : 2vw;
+    position        : relative;
 
+    ul li {
+      font-size  : 2em;
+      line-height: 9vh;
     }
+
+  }
+  
+  .menu__logo {
+    width            : 40vw;
+    height           : 40vw;
+    background       : url(../images/menu_bg.svg) no-repeat;
+    background-size  : cover;
+    bottom           : -20vw;
+    margin-left      : 0;
+    overflow         : hidden;
+    position         : absolute;
+    z-index          : -1;
   }
   
 }

@@ -1,15 +1,15 @@
-.viewsLine2__view {
+.homeViewLine__view {
     @include viewsLine();
 }
 
-.viewsLine2__view1 {
+.homeViewLine__view1 {
   background-color: #0000FF;
 }
 
-.viewsLine2__view2 {
+.homeViewLine__view2 {
   background-image : url(../images/home_bg.jpg);
 }
 
-.viewsLine2__view3 {
+.homeViewLine__view3 {
   background-color: #FF0000;
 }

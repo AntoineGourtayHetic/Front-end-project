@@ -57,9 +57,9 @@ firewatcherBtn.addEventListener('click', btnNav);
 // FUNCTION TO MOVE THE VIEWS CONTAINER
 function moveView(e) {
 
-    let checkUserNav = checkUserNav(viewCoords);
+    let checkNav = checkUserNav(viewCoords);
 
-    if(checkUserNav !== false) console.log('ok');
+    if(checkNav !== false) console.log('ok');
 
     let target;
     // IF THE USER USES THE HTML ARROWS
@@ -234,6 +234,8 @@ function updateViewCoords(checker) {
 }
 
 function checkUserNav(coords) {
+
+    return true;
 
     if(coords.x === 2) {
         arrows[1].parentNode.removeChild(arrows[1]);
