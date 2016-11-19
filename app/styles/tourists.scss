@@ -1,4 +1,4 @@
-.firewatcher {
+.tourists {
   width          : 100vw;
   height         : calc(100vh - 70px);
   display        : flex;
@@ -6,16 +6,7 @@
   align-items    : center;
   justify-content: space-around;
 
-  div.firewatcher__logo {
-    width              : 30vw;
-    height             : 20vh;
-    background-image   : url(../images/overwatch_logo.png);
-    background-size    : contain;
-    background-position: center;
-    background-repeat  : no-repeat;
-  }
-
-  .firewatcher__invitation {
+  .tourists__invitation {
     width          : 60vw;
     height         : 20vh;
     color          : #FFFFFF;
@@ -24,7 +15,7 @@
     align-items    : center;
     justify-content: center;
     flex-direction : column;
-    font-family    : "OpenSansBold";
+    font-family    : "FuturaBold", sans-serif;
 
   }
 
