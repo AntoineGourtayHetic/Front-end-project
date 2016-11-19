@@ -1,15 +1,4 @@
 .homeViewLine__view {
-    @include viewsLine();
-}
-
-.homeViewLine__view1 {
-  background-color: #0000FF;
-}
-
-.homeViewLine__view2 {
   background-image : url(../images/home_bg.jpg);
-}
-
-.homeViewLine__view3 {
-  background-color: #FF0000;
+  @include viewsLine();
 }

@@ -80,10 +80,12 @@ function moveView(e) {
     switch(target) {
 
 
+        case 'home__firewatcher'    :
         case 'navArrow__rightArrow':
             viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) - userViewWidth) + ', ' + parseInt(translateValues[5]) + ')';
         break;
 
+        case 'home__tourist'       :
         case 'navArrow__leftArrow':
             viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) + userViewWidth) + ', ' + parseInt(translateValues[5]) + ')';
         break;
@@ -169,25 +171,11 @@ function keyboardNav(e) {
 
     switch(key) {
 
-        // UP AND Z
-
-        case 38:
-        case 90:
-            moveView('navArrow__topArrow');
-        break;
-
         // LEFT AND Q
 
         case 37:
         case 81:
             moveView('navArrow__leftArrow');
-        break;
-
-        // DOWN AND S
-
-        case 40:
-        case 83:
-            moveView('navArrow__bottomArrow');
         break;
 
         // RIGHT AND D
