@@ -1,5 +1,6 @@
 var gulp         = require('gulp'),
     babel        = require('gulp-babel'),
+    image        = require('gulp-image'),
     concat       = require('gulp-concat'),
     sass         = require('gulp-sass'),
     postcss      = require('gulp-postcss'),
@@ -18,15 +19,6 @@ gulp.task('scss', function() {
         .pipe(sync.stream());
 });
 
-gulp.task('sync', ['scss', 'scripts'], function() {
-    sync.init({
-        server: './'
-    });
-
-    gulp.watch("app/styles/**/*.scss", ['scss']);
-    gulp.watch("app/scripts/**/*.js", ['scripts']);
-});
-
 gulp.task('scripts', () => {
     return gulp.src(['app/scripts/modernizr-custom.js', 'app/scripts/polyfills.js', 'app/scripts/nav.js', 'app/scripts/animations.js', 'app/scripts/menu.js'])
         .pipe(babel({
@@ -34,4 +26,20 @@ gulp.task('scripts', () => {
         }))
         .pipe(concat('main.js'))
         .pipe(gulp.dest('dist/scripts'));
+});
+
+gulp.task('images', function () {
+    gulp.src('app/images/*')
+        .pipe(image())
+        .pipe(gulp.dest('medias/images/'));
+});
+
+gulp.task('sync', ['scss', 'images', 'scripts'], function() {
+
+    sync.init({
+        server: './'
+    });
+
+    gulp.watch("app/styles/**/*.scss", ['scss']);
+    gulp.watch("app/scripts/**/*.js", ['scripts']);
 });

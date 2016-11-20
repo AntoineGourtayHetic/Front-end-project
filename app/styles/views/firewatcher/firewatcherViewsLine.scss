@@ -10,7 +10,8 @@
   }
 
   .firewatcherViewsLine__view3 {
-    @include whatWillIDo();
+    background-image: url(../../../../medias/images/home_firewatcher.jpg);
+    background-size : cover;
   }
 
 }
