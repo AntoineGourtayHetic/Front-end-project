@@ -47,7 +47,6 @@ function setArrows() {
 }
 
 // SET LISTENERS ON THE BTNS
-
 touristBtn.addEventListener('click', btnNav);
 firewatcherBtn.addEventListener('click', btnNav);
 
