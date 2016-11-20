@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="81px" height="81px" viewBox="0 0 81 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Waste</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M49.224,19.837 C51.893,19.838 54.059,17.671 54.058,15.002 C54.059,12.327 51.892,10.163 49.224,10.169 C46.549,10.163 44.384,12.327 44.39,15.002 C44.384,17.672 46.549,19.838 49.224,19.837 L49.224,19.837 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="9.66801279" height="9.66801279" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M42.997,28.737 L43.027,65.675 C43.038,69.363 48.47,69.329 48.456,65.59 L48.486,44.094 L49.537,44.094 L49.537,65.562 C49.526,69.32 55.024,69.413 55.027,65.676 L55.027,28.566 L55.994,28.566 L55.994,41.818 C55.981,45.002 60.296,45.002 60.286,41.874 L60.286,27.401 C60.295,23.494 57.397,21.2 54.344,21.202 L45.726,21.202 C43.685,21.201 42.205,22.009 40.948,23.79 L36.597,30.131 L29.061,30.131 C26.015,30.131 26.185,34.436 29.006,34.425 L37.707,34.425 C38.384,34.436 39.213,34.183 39.698,33.457 L42.997,28.737 L42.997,28.737 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="33.4528572" height="47.2281622" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <polygon id="path-5" points="28.808 51.371 28.808 47.848 25.282 47.848 25.282 51.371"></polygon>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="3.526" height="3.523" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <polygon id="path-7" points="30.74 43.522 28.153 40.964 25.565 43.522 28.153 46.11"></polygon>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5.175" height="5.146" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <polygon id="path-9" points="28.324 38.661 25.736 36.102 23.177 38.661 25.736 41.249"></polygon>
+        <mask id="mask-10" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5.147" height="5.147" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+        <polygon id="path-11" points="33.67 68.405 38.276 43.978 34.808 43.978 30.797 64.993 24.826 64.993 20.875 43.978 17.433 43.978 21.926 68.405"></polygon>
+        <mask id="mask-12" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20.843" height="24.427" fill="white">
+            <use xlink:href="#path-11"></use>
+        </mask>
+    </defs>
+    <g id="Maquettes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="A2.1---Will-do" transform="translate(-148.000000, -440.000000)">
+            <g id="Waste" transform="translate(35.000000, 420.000000)">
+                <g transform="translate(113.000000, 20.000000)" id="Shape">
+                    <use stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                    <use stroke="#FFFFFF" mask="url(#mask-4)" stroke-width="2" xlink:href="#path-3"></use>
+                    <use stroke="#FFFFFF" mask="url(#mask-6)" stroke-width="2" xlink:href="#path-5"></use>
+                    <use stroke="#FFFFFF" mask="url(#mask-8)" stroke-width="2" xlink:href="#path-7"></use>
+                    <use stroke="#FFFFFF" mask="url(#mask-10)" stroke-width="2" xlink:href="#path-9"></use>
+                    <use stroke="#FFFFFF" mask="url(#mask-12)" stroke-width="2" xlink:href="#path-11"></use>
+                    <path d="M40.105,0 C17.991,0 0,17.991 0,40.105 C0,62.219 17.991,80.209 40.105,80.209 C62.219,80.209 80.21,62.219 80.21,40.105 C80.21,17.991 62.219,0 40.105,0 Z M75.425,40.105 C75.425,48.984 72.125,57.101 66.696,63.313 L16.898,13.513 C23.11,8.085 31.227,4.784 40.106,4.784 C59.581,4.785 75.425,20.629 75.425,40.105 Z M4.785,40.105 C4.785,31.226 8.085,23.108 13.514,16.896 L63.313,66.696 C57.101,72.125 48.984,75.425 40.105,75.425 C20.629,75.425 4.785,59.581 4.785,40.105 Z" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

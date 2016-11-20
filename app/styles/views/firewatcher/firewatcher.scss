@@ -1,30 +1,22 @@
 .firewatcher {
-  width          : 100vw;
-  height         : calc(100vh - 70px);
-  display        : flex;
-  flex-direction : column;
-  align-items    : center;
-  justify-content: space-around;
+  width           : 100vw;
+  height          : 90vh;
+  background-image: url(../../../../medias/images/home_firewatcher.jpg);
+  background-size : cover;
 
-  div.firewatcher__logo {
-    width              : 30vw;
-    height             : 20vh;
-    background-image   : url(../../../../medias/images/overwatch_logo.png);
-    background-size    : contain;
-    background-position: center;
-    background-repeat  : no-repeat;
-  }
+  @include flexCenterTitle();
 
   .firewatcher__invitation {
-    width          : 60vw;
-    height         : 20vh;
-    color          : #FFFFFF;
+
+    @include futuraBoldTitle();
     font-size      : 3vw;
+    width          : 60vw;
+    height         : 90vh;
+    text-align     : center;
     display        : flex;
     align-items    : center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction : column;
-    font-family    : "FuturaBold", sans-serif;
 
   }
 

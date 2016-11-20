@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="70px" viewBox="0 0 90 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>NoWifi</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Maquettes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="A3.1---Spirit" transform="translate(-143.000000, -471.000000)" fill="#FFFFFF">
+            <g id="Wifi" transform="translate(35.000000, 446.000000)">
+                <g id="NoWifi" transform="translate(108.000000, 25.000000)">
+                    <g id="Group" transform="translate(0.000000, 5.000000)">
+                        <circle id="Oval" cx="45.2" cy="60" r="5"></circle>
+                        <path d="M45,45.1 C49.9,45.1 54.5,47 58,50.5 L60,48.5 C55.9,44.4 50.5,42.3 45.1,42.3 C43.6,42.3 42.1,42.5 40.6,42.8 L35.7,47.7 C38.4,46 41.6,45.1 45,45.1 Z" id="Shape"></path>
+                        <path d="M67.9,40.5 L69.9,38.5 C65.3,33.9 59.8,30.9 54,29.3 L51.7,31.6 C57.8,32.9 63.4,36 67.9,40.5 Z" id="Shape"></path>
+                        <path d="M20.1,38.5 L22.1,40.5 C26.8,35.8 32.7,32.7 39,31.6 L42.3,28.3 C34.2,28.9 26.3,32.3 20.1,38.5 Z" id="Shape"></path>
+                        <path d="M77.9,30.5 L79.9,28.5 C75.5,24.1 70.4,20.7 65,18.3 L62.9,20.4 C68.4,22.8 73.5,26.1 77.9,30.5 Z" id="Shape"></path>
+                        <path d="M45,14.1 C32.4,14.1 19.8,18.9 10.1,28.5 L12.1,30.5 C20.9,21.7 32.6,16.9 45,16.9 C47.7,16.9 50.4,17.1 53,17.6 L55.4,15.2 C52,14.5 48.5,14.1 45,14.1 Z" id="Shape"></path>
+                        <path d="M45,0 C28.8,0 12.6,6.2 0.2,18.6 L0.2,18.6 L2.2,20.6 C13.6,9.1 28.8,2.8 45,2.8 C51.7,2.8 58.3,3.9 64.5,6 L66.7,3.8 C59.7,1.3 52.4,0 45,0 Z" id="Shape"></path>
+                        <path d="M87.8,20.6 L89.8,18.6 C85.4,14.2 80.6,10.7 75.5,7.8 L73.4,9.9 C78.7,12.7 83.5,16.2 87.8,20.6 Z" id="Shape"></path>
+                    </g>
+                    <rect id="Rectangle-path" transform="translate(49.283340, 32.900420) rotate(45.000000) translate(-49.283340, -32.900420) " x="47.7833544" y="-12.0991484" width="2.99997123" height="89.9991369"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

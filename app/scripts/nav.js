@@ -8,15 +8,12 @@ let userViewWidth  = updateUserViewPort('width'),
     userViewHeight = updateUserViewPort('height'),
     userTouchStartCoord = {
         clientX: 0,
-        clientY: 0
     },
     userTouchMoveCoord = {
         clientX: 0,
-        clientY: 0
     },
     viewCoords = {
-        x: 1,
-        y: 2,
+        x: 0,
     };
 
 //DETECT WHEN THE USER RESIZES HIS WINDOW TO UPDATE THE VARIABLES
@@ -26,13 +23,11 @@ window.addEventListener('keyup', keyboardNav);
 // DETECT WHEN THE USER STARTS TOUCHING HIS SCREEN
 window.addEventListener('touchstart', (e) => {
     userTouchStartCoord.clientX = e.touches[0].clientX;
-    userTouchStartCoord.clientY = e.touches[0].clientY;
 });
 // DETECT WHEN THE USER MOVES HIS FINGER ON HIS SCREEN
 window.addEventListener('touchmove', (e) => {
 
     userTouchMoveCoord.clientX = e.touches[0].clientX;
-    userTouchMoveCoord.clientY = e.touches[0].clientY;
 });
 // DETECT WHEN THE USER DOESN'T TOUCH HIS SCREEN ANYMORE
 window.addEventListener('touchend', touchNav);
@@ -56,41 +51,46 @@ firewatcherBtn.addEventListener('click', btnNav);
 // FUNCTION TO MOVE THE VIEWS CONTAINER
 function moveView(e) {
 
-    let checkNav = checkUserNav(viewCoords);
 
-    if(checkNav !== false) console.log('ok');
+        let checkNav = checkUserNav(viewCoords);
 
-    let target;
-    // IF THE USER USES THE HTML ARROWS
-    if(typeof e === 'object') {
-        // GET THE LAST OF ITS CLASS TO GUESS WHICH ARROW HE CLICKED
-        target = e.target.classList[e.target.classList.length - 1];
-    } else {
-        // IF HE DOESN'T USE THE ARROWS WE ALREADY KNOW THANKS TO THE PARAM
-        target = e;
-    }
+        if(checkNav !== false) console.log('ok');
 
-    // GET THE CSS VALUES OF THE ARROW
-    let viewsContainerComputedStyle = window.getComputedStyle(viewsContainer),
+        let target;
+        // IF THE USER USES THE HTML ARROWS
+        if(typeof e === 'object') {
+            // GET THE LAST OF ITS CLASS TO GUESS WHICH ARROW HE CLICKED
+            target = e.target.classList[e.target.classList.length - 1];
+        } else {
+            // IF HE DOESN'T USE THE ARROWS WE ALREADY KNOW THANKS TO THE PARAM
+            target = e;
+        }
 
-        // GET THE TRANSLATE VALUE VIA FUNCTION getTranslateValue (IT RETURNS A MATRIX())
-        translateValues = getTranslateValue(viewsContainerComputedStyle.getPropertyValue('transform'));
+        if((viewCoords.x <= 1 && target === 'navArrow__rightArrow') || (viewCoords.x >= -1 && target === 'navArrow__leftArrow')) {
 
-    switch(target) {
+            console.log(target);
 
+            // GET THE CSS VALUES OF THE ARROW
+            let viewsContainerComputedStyle = window.getComputedStyle(viewsContainer),
 
-        case 'home__firewatcher'    :
-        case 'navArrow__rightArrow':
-            viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) - userViewWidth) + ', ' + parseInt(translateValues[5]) + ')';
-        break;
+                // GET THE TRANSLATE VALUE VIA FUNCTION getTranslateValue (IT RETURNS A MATRIX())
+                translateValues = getTranslateValue(viewsContainerComputedStyle.getPropertyValue('transform'));
 
-        case 'home__tourist'       :
-        case 'navArrow__leftArrow':
-            viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) + userViewWidth) + ', ' + parseInt(translateValues[5]) + ')';
-        break;
+            switch (target) {
 
-    }
-    updateViewCoords(target);
+                case 'home__tourist'       :
+                case 'navArrow__rightArrow':
+                    viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) - userViewWidth) + ', ' + parseInt(translateValues[5]) + ')';
+                    break;
+
+                case 'navArrow__leftArrow':
+                case 'home__firewatcher'  :
+                    viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) + userViewWidth) + ', ' + parseInt(translateValues[5]) + ')';
+                    break;
+
+            }
+            updateViewCoords(target);
+        }
 }
 
 // RETURN AN ARRAY OF THE TRANSLATE VALUES
@@ -144,19 +144,11 @@ function redirectTouchNav() {
      * COMPARE THE GAP BETWEEN THE TOUCH START COORDS AND THE TOUCH END COORDS
      * AND THE DIFF BETWEEN THE SOUSTRACTION OF THE TOUCH START AND TOUCH END X AND THE TOUCH START Y AND TOUCH START Y
      * */
-    if((userTouchMoveCoord.clientY > userTouchStartCoord.clientY) && ((userTouchMoveCoord.clientY - userTouchStartCoord.clientY) > (userTouchMoveCoord.clientX - userTouchStartCoord.clientX))) {
-
-        return 'TOP TO BOTTOM';
-
-    } else if((userTouchMoveCoord.clientY < userTouchStartCoord.clientY) && ((userTouchMoveCoord.clientY - userTouchStartCoord.clientY) < (userTouchMoveCoord.clientX - userTouchStartCoord.clientX))) {
-
-        return  'BOTTOM TO TOP';
-
-    } else if((userTouchMoveCoord.clientX > userTouchStartCoord.clientX) && ((userTouchMoveCoord.clientY - userTouchStartCoord.clientY) < (userTouchMoveCoord.clientX - userTouchStartCoord.clientX))) {
+    if((userTouchMoveCoord.clientX > userTouchStartCoord.clientX)) {
 
         return 'LEFT TO RIGHT';
 
-    } else if((userTouchMoveCoord.clientX < userTouchStartCoord.clientX) && ((userTouchMoveCoord.clientY - userTouchStartCoord.clientY) > (userTouchMoveCoord.clientX - userTouchStartCoord.clientX))) {
+    } else {
 
         return 'RIGHT TO LEFT';
 
@@ -189,16 +181,6 @@ function keyboardNav(e) {
 
 function updateViewCoords(checker) {
     switch(checker) {
-
-        case 'navArrow__topArrow':
-        case 'home__tourist'     :
-           viewCoords.y++;
-        break;
-
-        case 'navArrow__bottomArrow':
-        case 'home__firewatcher'    :
-            viewCoords.y--;
-        break;
 
         case 'navArrow__rightArrow':
             viewCoords.x++;
