@@ -5,9 +5,91 @@
   vertical-align: top;
 }
 
-@mixin arrowBackground() {
-  fill: white;
-  &:hover {
-    fill: black;
+@mixin flexColumnCenter() {
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : center;
+}
+
+@mixin flexCenterTitle() {
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  justify-content : space-around;
+}
+
+@mixin criterionHoverEffect() {
+
+  &:hover use {
+    fill  : lighten(#FEBB34, 10%);
+    stroke: lighten(#FEBB34, 10%);
   }
+
+  &hover .criterionImageCircle {
+    border: 2px solid lighten(#FEBB34, 10%);
+  }
+
+}
+
+@mixin criterionImageCircle() {
+  width              : 15vw;
+  height             : 15vw;
+  border             : 2px solid #FEBB34;
+  display            : flex;
+  align-items        : center;
+  justify-content    : center;
+  border-radius      : 50%;
+  transition-duration: 1.5s;
+
+  svg {
+    max-height: 80%;
+    max-width : 80%;
+  }
+
+}
+
+@mixin criterionCard() {
+  width           : 60vw;
+  height          : 30vw;
+  margin          : 15px 0;
+}
+
+@mixin criterionCardBottomText() {
+  font-family   : "FuturaMedium", sans-serif;
+  color         : #000000;
+  font-size     : 2vw;
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+
+  div {
+    margin: 15px 0;
+  }
+
+  .title {
+    font-weight: 700;
+  }
+
+  .text {
+    font-weight: 300;
+  }
+
+}
+
+@mixin arrowBackground() {
+
+  fill: white;
+
+  &:hover {
+
+    fill: black;
+
+  }
+
+}
+
+@mixin futuraBoldTitle() {
+  font-family: "FuturaBold", sans-serif;
+  color      : #FFFFFF
 }
