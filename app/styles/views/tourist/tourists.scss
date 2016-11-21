@@ -8,14 +8,17 @@
 
   .tourists__invitation {
     width: 60vw;
-    height: 20vh;
+    height: 60vh;
     color: #FFFFFF;
-    font-size: 3vw;
+    font-size: 8vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     font-family: "FuturaBold", sans-serif;
 
+    @media (max-width: 480px) {
+
+    }
   }
 }
