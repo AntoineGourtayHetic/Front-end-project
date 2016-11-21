@@ -4,8 +4,7 @@ const arrows          = document.querySelectorAll('.arrow'),
       touristBtn      = document.querySelector('.home__tourist'),
       firewatcherBtn  = document.querySelector('.home__firewatcher');
 
-let userViewWidth  = updateUserViewPort('width'),
-    userViewHeight = updateUserViewPort('height'),
+let resizeTimeout,
     userTouchStartCoord = {
         clientX: 0,
     },
@@ -16,8 +15,24 @@ let userViewWidth  = updateUserViewPort('width'),
         x: 0,
     };
 
+  function resizeThrottler() {
+    // ignore resize events as long as an actualResizeHandler execution is in the queue
+    if ( !resizeTimeout ) {
+      resizeTimeout = setTimeout(function() {
+        resizeTimeout = null;
+        actualResizeHandler();
+     
+       // The actualResizeHandler will execute at a rate of 15fps
+       }, 66);
+    }
+  }
+
+  function actualResizeHandler() {
+    updateUserViewPort();
+  }
+
 //DETECT WHEN THE USER RESIZES HIS WINDOW TO UPDATE THE VARIABLES
-window.addEventListener('resize', updateUserViewPort);
+window.addEventListener('resize', resizeThrottler, false);
 // DETECT WHEN THE USER PRESSES A KEY TO MOVE THE VIEWS
 window.addEventListener('keyup', keyboardNav);
 // DETECT WHEN THE USER STARTS TOUCHING HIS SCREEN
@@ -51,7 +66,6 @@ firewatcherBtn.addEventListener('click', btnNav);
 // FUNCTION TO MOVE THE VIEWS CONTAINER
 function moveView(e) {
 
-
         let checkNav = checkUserNav(viewCoords);
 
         if(checkNav !== false) console.log('ok');
@@ -67,25 +81,24 @@ function moveView(e) {
         }
 
         if((viewCoords.x <= 1 && target === 'navArrow__rightArrow') || (viewCoords.x >= -1 && target === 'navArrow__leftArrow')) {
-
-            console.log(target);
-
             // GET THE CSS VALUES OF THE ARROW
             let viewsContainerComputedStyle = window.getComputedStyle(viewsContainer),
 
-                // GET THE TRANSLATE VALUE VIA FUNCTION getTranslateValue (IT RETURNS A MATRIX())
-                translateValues = getTranslateValue(viewsContainerComputedStyle.getPropertyValue('transform'));
-
+            // GET THE TRANSLATE VALUE VIA FUNCTION getTranslateValue (IT RETURNS A MATRIX())
+            translateValues = getTranslateValue(viewsContainerComputedStyle.getPropertyValue('transform'));
+            
             switch (target) {
 
                 case 'home__tourist'       :
                 case 'navArrow__rightArrow':
-                    viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) - userViewWidth) + ', ' + parseInt(translateValues[5]) + ')';
+                    viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) - getWidth()) + ', ' + parseInt(translateValues[5]) + ')';
+                    console.log(viewsContainer.style.transform);
                     break;
 
                 case 'navArrow__leftArrow':
                 case 'home__firewatcher'  :
-                    viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) + userViewWidth) + ', ' + parseInt(translateValues[5]) + ')';
+                    viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) + getWidth()) + ', ' + parseInt(translateValues[5]) + ')';
+                    console.log(viewsContainer.style.transform);
                     break;
 
             }
@@ -103,21 +116,15 @@ function getTranslateValue(matrix) {
 }
 
 
-// UPDATE THE VIEWPORT VALUE WHEN THE USER RESIZES HIS WINDOW
-function updateUserViewPort(arg) {
-    if(arg == 'width') {
-        return window.innerWidth;
-    } else {
-        return window.innerHeight;
-    }
-
+// get the current viewportWidth
+function getWidth() {
+    return window.innerWidth;
 }
 
 // FUNCTION TO HANDLE TOUCH NAV DEPENDING ON THE GESTURE
 function touchNav(e) {
 
-
-    let redirect = redirectTouchNav();
+ let redirect = redirectTouchNav();
 
     switch(redirect) {
 
