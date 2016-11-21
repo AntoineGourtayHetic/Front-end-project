@@ -4,7 +4,8 @@ const arrows          = document.querySelectorAll('.arrow'),
       touristBtn      = document.querySelector('.home__tourist'),
       firewatcherBtn  = document.querySelector('.home__firewatcher');
 
-let resizeTimeout,
+let userViewWidth = window.innerWidth,
+    resizeTimeout,
     userTouchStartCoord = {
         clientX: 0,
     },
@@ -91,13 +92,13 @@ function moveView(e) {
 
                 case 'home__tourist'       :
                 case 'navArrow__rightArrow':
-                    viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) - getWidth()) + ', ' + parseInt(translateValues[5]) + ')';
+                    viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) - userViewWidth) + ', ' + parseInt(translateValues[5]) + ')';
                     console.log(viewsContainer.style.transform);
                     break;
 
                 case 'navArrow__leftArrow':
                 case 'home__firewatcher'  :
-                    viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) + getWidth()) + ', ' + parseInt(translateValues[5]) + ')';
+                    viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) + userViewWidth) + ', ' + parseInt(translateValues[5]) + ')';
                     console.log(viewsContainer.style.transform);
                     break;
 
@@ -115,10 +116,9 @@ function getTranslateValue(matrix) {
     return values;
 }
 
-
-// get the current viewportWidth
-function getWidth() {
-    return window.innerWidth;
+//getcurrentviewport
+function updateUserViewPort() {
+    userViewWidth = window.innerWidth;
 }
 
 // FUNCTION TO HANDLE TOUCH NAV DEPENDING ON THE GESTURE

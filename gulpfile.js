@@ -20,7 +20,7 @@ gulp.task('scss', function() {
 });
 
 gulp.task('scripts', () => {
-    return gulp.src(['app/scripts/modernizr-custom.js', 'app/scripts/polyfills.js', 'app/scripts/nav.js', 'app/scripts/animations.js', 'app/scripts/menu.js'])
+    return gulp.src('app/scripts/**')
         .pipe(babel({
             presets: ['es2015']
         }))
