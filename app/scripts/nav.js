@@ -18,20 +18,15 @@ let resizeTimeout,
 
     function resizeThrottler() {
 
-        let width = getWidth(),
-            viewsContainerComputedStyle = window.getComputedStyle(viewsContainer),
+        let width = getWidth();
 
-            // GET THE TRANSLATE VALUE VIA FUNCTION getTranslateValue (IT RETURNS A MATRIX())
-            translateValues = getTranslateValue(viewsContainerComputedStyle.getPropertyValue('transform'));
-
-        console.log(width);
 
         if(viewCoords.x > 0) {
             viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + ( - (width * (viewCoords.x + 2))) + ', 0)';
-            console.log( - ((width * (viewCoords.x + 2))));
+
         } else {
             viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + ( + (width * (Math.abs(viewCoords.x) - 2))) + ', 0)';
-            console.log(((width * 2) + getWidth() * viewCoords.x));
+
         }
 
 
