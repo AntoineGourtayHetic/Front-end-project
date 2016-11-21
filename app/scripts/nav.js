@@ -15,21 +15,27 @@ let resizeTimeout,
         x: 0,
     };
 
-  function resizeThrottler() {
-    // ignore resize events as long as an actualResizeHandler execution is in the queue
-    if ( !resizeTimeout ) {
-      resizeTimeout = setTimeout(function() {
-        resizeTimeout = null;
-        actualResizeHandler();
-     
-       // The actualResizeHandler will execute at a rate of 15fps
-       }, 66);
-    }
-  }
 
-  function actualResizeHandler() {
-    updateUserViewPort();
-  }
+    function resizeThrottler() {
+
+        let width = getWidth(),
+            viewsContainerComputedStyle = window.getComputedStyle(viewsContainer),
+
+            // GET THE TRANSLATE VALUE VIA FUNCTION getTranslateValue (IT RETURNS A MATRIX())
+            translateValues = getTranslateValue(viewsContainerComputedStyle.getPropertyValue('transform'));
+
+        console.log(width);
+
+        if(viewCoords.x > 0) {
+            viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + ( - (width * (viewCoords.x + 2))) + ', 0)';
+            console.log( - ((width * (viewCoords.x + 2))));
+        } else {
+            viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + ( + (width * (Math.abs(viewCoords.x) - 2))) + ', 0)';
+            console.log(((width * 2) + getWidth() * viewCoords.x));
+        }
+
+
+    }
 
 //DETECT WHEN THE USER RESIZES HIS WINDOW TO UPDATE THE VARIABLES
 window.addEventListener('resize', resizeThrottler, false);
@@ -66,10 +72,6 @@ firewatcherBtn.addEventListener('click', btnNav);
 // FUNCTION TO MOVE THE VIEWS CONTAINER
 function moveView(e) {
 
-        let checkNav = checkUserNav(viewCoords);
-
-        if(checkNav !== false) console.log('ok');
-
         let target;
         // IF THE USER USES THE HTML ARROWS
         if(typeof e === 'object') {
@@ -85,19 +87,19 @@ function moveView(e) {
             let viewsContainerComputedStyle = window.getComputedStyle(viewsContainer),
 
             // GET THE TRANSLATE VALUE VIA FUNCTION getTranslateValue (IT RETURNS A MATRIX())
-            translateValues = getTranslateValue(viewsContainerComputedStyle.getPropertyValue('transform'));
+                translateValues = getTranslateValue(viewsContainerComputedStyle.getPropertyValue('transform'));
             
             switch (target) {
 
                 case 'home__tourist'       :
                 case 'navArrow__rightArrow':
-                    viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) - getWidth()) + ', ' + parseInt(translateValues[5]) + ')';
+                    viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) - getWidth()) + ', 0)';
                     console.log(viewsContainer.style.transform);
                     break;
 
                 case 'navArrow__leftArrow':
                 case 'home__firewatcher'  :
-                    viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) + getWidth()) + ', ' + parseInt(translateValues[5]) + ')';
+                    viewsContainer.style.transform = 'matrix(1, 0, 0, 1, ' + (parseInt(translateValues[4]) + getWidth()) + ', 0)';
                     console.log(viewsContainer.style.transform);
                     break;
 
@@ -200,55 +202,6 @@ function updateViewCoords(checker) {
     console.log(viewCoords);
 }
 
-function checkUserNav(coords) {
-
-    return true;
-
-    if(coords.x === 2) {
-        arrows[1].parentNode.removeChild(arrows[1]);
-        delete arrows[1];
-        return false;
-    }
-
-    if(coords.x === 0) {
-        arrows[3].parentNode.removeChild(arrows[3]);
-        delete arrows[3];
-        return false;
-    }
-
-    if(coords.y === 1) {
-        arrows[2].parentNode.removeChild(arrows[2]);
-        delete arrows[2];
-        return false;
-    }
-
-    if(coords.y === 3) {
-        arrows[0].parentNode.removeChild(arrows[0]);
-        delete arrows[0];
-        return false;
-    }
-
-
-    let arrowElem;
-
-    for(let i = 0; i < arrowsContainer.length; i++) {
-
-        if(arrowsContainer[i].children.length > 0 && arrowElem !== null) {
-            arrowElem = arrowsContainer[i].children[0].cloneNode(true);
-            break;
-        }
-    }
-
-
-    arrowsContainer.forEach((arrowContainer, id) => {
-        if(arrowContainer.children.length == 0) {
-            arrows[id] = arrowElem;
-            arrowContainer.appendChild(arrows[id]);
-            setTransforms(id);
-            arrows[id].className = setArrowClass(id);
-        }
-    });
-}
 
 function setTransforms(id) {
     switch(id) {
@@ -259,28 +212,6 @@ function setTransforms(id) {
 
         case 1:
             return "rotate(-90deg)";
-        break;
-
-    }
-}
-
-function setArrowClass(id) {
-    switch(id) {
-
-        case 0:
-            return "arrow navArrow__topArrow";
-        break;
-
-        case 1:
-            return "arrow navArrow__rightArrow";
-        break;
-
-        case 2:
-            return "arrow navArrow__bottomArrow";
-        break;
-
-        case 3:
-            return "arrow navArrow__leftArrow";
         break;
 
     }
