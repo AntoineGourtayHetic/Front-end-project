@@ -1,0 +1,72 @@
+.firewatcherSpirits {
+
+
+  @include flexColumnCenter();
+
+
+  .firewatcherSpirits__title {
+
+    @include futuraBoldTitle();
+    @include flexCenterTitle();
+
+    background-image: url(../../../../medias/images/doIHaveSpirit_bg.jpg);
+    background-size : cover;
+    height          : 90vh;
+    width           : 100vw;
+    font-size       : 3vw;
+    justify-content : flex-end;
+    text-align      : center;
+
+    .firewatcherSpirits__title--text {
+      height         : 60vh;
+      padding        : 10vh;
+      display        : flex;
+      flex-direction : column;
+      justify-content: flex-end;
+    }
+
+  }
+
+
+  .firewatcherSpirit {
+
+    @include criterionCard();
+
+    .firewatcherSpirit__top {
+      display        : flex;
+      align-items    : center;
+      justify-content: center;
+
+      .criterionImageCircle {
+
+        @include criterionImageCircle();
+
+        .firewatcherSpirit__top--imageContainer {
+
+          @include criterionHoverEffect();
+
+        }
+
+      }
+
+      use {
+
+        fill     : #FEBB34;
+        stroke   : #FEBB34;
+        max-width: 15vw;
+        height   : 30vw;
+
+      }
+
+    }
+
+    .firewatcherSpirit__bottom--text {
+
+      @include criterionCardBottomText();
+
+
+    }
+
+  }
+
+}

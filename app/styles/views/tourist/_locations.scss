@@ -1,0 +1,45 @@
+.locations {
+
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  background-image: url(../../medias/images/YosemiteTransparent.svg);
+  background-size : contain;
+  .location {
+    width              : 85vw;
+    display            : flex;
+    align-items        : baseline;
+    flex-direction     : row-reverse;
+    transition-duration: 0.3s;
+
+    .locations__image {
+      display       : flex;
+      flex-direction: column;
+      align-items   : flex-end;
+
+      img {
+        max-width: 43%;
+      }
+
+    }
+
+    .locations__description {
+
+      display        : flex;
+      flex-direction : column;
+      justify-content: flex-end;
+
+      h3 {
+        font-size: 3vw;
+        color: #FEBB34;
+        font-family: 'FuturaBold', sans-serif;
+      }
+      p {
+        color: #fff;
+        font-size: 1.5vw;
+        font-family: "Futura", sans-serif;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,30 @@
+.touristsViewsLine {
+
+  .progressive_background {
+    width           : 90vw;
+    height          : 95vh;
+    margin          : 0 10vw;
+    z-index         : -1;
+    background-color: orange;
+    position        : fixed;
+  }
+
+  .touristsViewsLine__view {
+    @include viewsLine();
+  }
+
+  .touristsViewsLine__view1 {
+    background-image: url(../../../../../medias/images/whatWillIDo_bg.jpg);
+    background-size : cover;
+  }
+
+  .touristsViewsLine__view2 {
+    background-image: url(../../../../medias/images/doIHaveSpirit_bg.jpg);
+    background-size: cover;
+  }
+
+  .touristsViewsLine__view3 {
+    overflow: scroll;
+  }
+
+}
