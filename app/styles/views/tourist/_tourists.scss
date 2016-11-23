@@ -1,27 +1,41 @@
 .tourists {
 
   width           : 100vw;
-  height          : calc(100vh - 70px);
+  height          : 100vh;
   display         : flex;
   flex-direction  : column;
   align-items     : center;
-  justify-content : flex-end;
-  background-image: url(../../../../medias/images/home_tourists_bg.jpg);
+  justify-content : space-between;
+  background-image: url(../../../../medias/images/Vernal_Fall-Large.gif);
   background-size : cover;
 
   .tourists__invitation {
     width          : 60vw;
     height         : 60vh;
     color          : #FFFFFF;
-    font-size      : 8vw;
+    font-size      : 5vw;
     display        : flex;
     align-items    : center;
     justify-content: center;
     flex-direction : column;
     font-family    : "FuturaBold", sans-serif;
 
-    @media (max-width: 480px) {
+    .view_invitations {
+      font-size         : 2vw;
+      color             : #FFFFFF;
+      animation-name    : btnColor;
+      animation-duration: 0.5s;
 
     }
+
   }
+
+  button {
+    font-size    : 3vw;
+    color        : #FFFFFF;
+    margin-top   : 10vh;
+    margin-bottom: 10vh;
+    font-family    : "FuturaBold", sans-serif;
+  }
+
 }
