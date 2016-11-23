@@ -1,11 +1,17 @@
-const menu_icon = document.querySelector('.menu-icon'),
-      menu = document.querySelector('.menu');
+let menuIcon = document.querySelector('.menu__burger'),
+    menu     = document.querySelector('.menu')
+    ;
 
-menu_icon.addEventListener('click', menuAppear);
-
+menuIcon.addEventListener('click', menuAppear);
 function menuAppear() {
-    menu.classList.toggle('menu-opened');
-    menu.classList.toggle('menu-closed');
-    menu_icon.classList.toggle('menu-icon-opened');
-    menu_icon.classList.toggle('menu-icon-closed');
+     if(menu.classList.length == 1) {
+         menu.classList.add('open');
+     } else {
+         menu.classList.remove('open');
+     }
+     if(menuIcon.classList.length == 1) {
+         menuIcon.classList.add('open');
+     } else {
+         menuIcon.classList.remove('open');
+     }
 }

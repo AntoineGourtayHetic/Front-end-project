@@ -1,5 +1,5 @@
 let loader = document.querySelector('.loaderWrapper');
-let mustAppear = document.querySelectorAll('.home .hidden');
+let mustAppear = document.querySelectorAll('.views__homeViewLine .hidden');
 
 window.addEventListener('load',()=>{ 
       loader.className += ' fade';

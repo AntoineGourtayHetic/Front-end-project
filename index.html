@@ -9,297 +9,72 @@
     <script async src="dist/scripts/main.js"></script>
 </head>
 <body>
-    <section class="container">
-        <div class="loaderWrapper">
-            <div class="loaderWrapper__loader"></div>
-        </div>
-        <div class="navArrows">
-            <i class="fa fa-angle-left navArrows__arrow" aria-hidden="true"></i>
-            <i class="fa fa-angle-right navArrows__arrow" aria-hidden="true"></i>
-        </div>
+    <div class="loaderWrapper">
+        <div class="loaderWrapper__loader"></div>
+    </div>
+    <section class="views">
+        <!--_____________________________________________________________________________________________________________________________________ -->
+        
+                                                        <!-- NAV ELEMENTS -->
 
-        <!-- MENU -->
-        <div class="menu-icon menu-icon-closed"></div>
-
+        <!--_____________________________________________________________________________________________________________________________________ -->
+        <input type="radio" name="view" class="view-radio0" checked id="view0">
+        <input type="radio" name="view" class="view-radio1" id="view1">
+        <input type="radio" name="view" class="view-radio2" id="view2">
+        <input type="radio" name="view" class="view-radio3" id="view3">
     
-        <nav class="menu menu-closed">
-            <ul>
-                <li>HOME</li>
-                <li>TEMOIGNAGE</li>
-                <li>TOURIST</li>
-                <li>FIREWATCHER</li>
-                <li>APPLY</li>
-                <li>RESERVATION</li>
-            </ul>
-        <div class="menu__logo"></div>
-        </nav>
-        <!-- VIEWS -->
-        <div class="container__views">
-            <!-- #Firewatcher (left) -->
-            <div class="firewatcherViewsLine viewsLine">
-                <!-- ##Spirit -->
-                <div class="firewatcherViewsLine__view firewatcherViewsLine__view1 view">
+        <!-- rounds -->
+        <div class="views_sliderPagination">
+            <label for="view0" class="page0"></label> 
+            <label for="view1" class="page1"></label>
+            <label for="view2" class="page2"></label>
+            <label for="view3" class="page3"></label>
+        </div>
+        <!-- arrow next -->
+        <div class="views_control views_control-next">
+            <label for="view0" class="numb0"><i class="fa fa-angle-right"></i></label>
+            <label for="view1" class="numb1"><i class="fa fa-angle-right"></i></label>
+            <label for="view2" class="numb2"><i class="fa fa-angle-right"></i></label>
+            <label for="view3" class="numb3"><i class="fa fa-angle-right"></i></label>
+        </div>
+        <!-- arrow previous -->
+        <div class="views_control views_control-previous">
+            <label for="view0" class="numb0"><i class="fa fa-angle-left"></i></label>
+            <label for="view1" class="numb1"><i class="fa fa-angle-left"></i></label>
+            <label for="view2" class="numb2"><i class="fa fa-angle-left"></i></label>
+            <label for="view3" class="numb3"><i class="fa fa-angle-left"></i></label>
+        </div>
+        <!--_____________________________________________________________________________________________________________________________________ -->
+        
+                                                        <!-- VIEWS -->
 
-                    <div class="firewatcherSpirits">
-                        <div class="firewatcherSpirits__title">
-                            <div class="firewatcherSpirits__title--text">
-                                <p>DO I HAVE</p>
-                                <p>THE SPIRIT OF</p>
-                                <p>FOREST RANGER ?</p>
-                            </div>
-                        </div>
-
-                        <div class="firewatcherSpirit firewatcherSpirit__strong">
-
-                            <div class="firewatcherSpirit__top">
-                                <div class="criterionImageCircle hideImageCircle">
-                                    <svg class="firewatcherSpirit__top--imageContainer">
-                                        <use xlink:href="#strong"></use>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="firewatcherSpirit__bottom">
-                                <div class="firewatcherSpirit__bottom--text">
-                                    <div class="title">Be strong</div>
-                                    <div class="text">Correct Stamina</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="firewatcherSpirit firewatcherSpirit__no_wifi">
-
-                            <div class="firewatcherSpirit__top">
-                                <div class="criterionImageCircle hideImageCircle">
-                                    <svg class="firewatcherSpirit__top--imageContainer">
-                                        <use xlink:href="#no_wifi"></use>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="firewatcherSpirit__bottom">
-                                <div class="firewatcherSpirit__bottom--text">
-                                    <div class="title">No wifi addict</div>
-                                    <div class="text">Live without a close wifi connection</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="firewatcherSpirit firewatcherSpirit__walker">
-
-                            <div class="firewatcherSpirit__top">
-                                <div class="criterionImageCircle hideImageCircle">
-                                    <svg class="firewatcherSpirit__top--imageContainer">
-                                        <use xlink:href="#walker"></use>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="firewatcherSpirit__bottom">
-                                <div class="firewatcherSpirit__bottom--text">
-                                    <div class="title">Good walker</div>
-                                    <div class="text">Being able to walk for hours</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="firewatcherSpirit firewatcherSpirit__nature">
-
-                            <div class="firewatcherSpirit__top">
-                                <div class="criterionImageCircle hideImageCircle">
-                                    <svg class="firewatcherSpirit__top--imageContainer">
-                                        <use xlink:href="#nature"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="firewatcherSpirit__bottom">
-                                <div class="firewatcherSpirit__bottom--text">
-                                    <div class="title">Nature lover</div>
-                                    <div class="text">Good theorical nature knowledge</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="firewatcherSpirit firewatcherSpirit__solitary">
-
-                            <div class="firewatcherSpirit__top">
-                                <div class="criterionImageCircle hideImageCircle">
-                                    <svg class="firewatcherSpirit__top--imageContainer">
-                                        <use xlink:href="#solitary"></use>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="firewatcherSpirit__bottom">
-                                <div class="firewatcherSpirit__bottom--text">
-                                    <div class="title">Solitary</div>
-                                    <div class="text">Being able to live alone during a long period</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="firewatcherSpirit firewatcherSpirit__observation">
-
-                            <div class="firewatcherSpirit__top">
-                                <div class="criterionImageCircle hideImageCircle">
-                                    <svg class="firewatcherSpirit__top--imageContainer">
-                                        <use xlink:href="#observation"></use>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="firewatcherSpirit__bottom">
-                                <div class="firewatcherSpirit__bottom--text">
-                                    <div class="title">Observation</div>
-                                    <div class="text">Have a good observation sense</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+        <!--_____________________________________________________________________________________________________________________________________ -->
+        <!--_____________________________________________________________________________________________________________________________________ -->
+                                                                <!-- home -->
+        <!--_____________________________________________________________________________________________________________________________________ -->
+        <section class="views__view views__view-view0">
+            <div class="views__homeViewLine">
+                <div class="views__homeTitle hidden">
+                    <h2>YOSEMITE</h2>
+                    <h3>NATIONAL PARK</h3>
                 </div>
-
-                <!-- ##What do they do  -->
-
-                <div class="firewatcherViewsLine__view firewatcherViewsLine__view3 view">
-                    <div class="firewatcher">
-                        <!-- ###Header -->
-                        <div class="firewatcher__invitation">
-
-                            <div class="firewatcher__invitation--top">
-                                <p>BECOME A</p>
-                                <p>FOREST RANGER</p>
-                                <p>AT YOSEMITE</p>
-                            </div>
-                            <div class="firewatcher__invitation--bottom">
-                                <p>WHAT WILL I DO ?</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ###Criterions -->
-                     <div class="firewatcherCriterions">
-                        <div class="firewatcherCriterion firewatcherCriterions__strong">
-
-                            <div class="firewatcherCriterion__top">
-                                <div class="criterionImageCircle hideImageCircle">
-                                    <svg class="firewatcherCriterion__top--imageContainer">
-                                        <use xlink:href="#fire"></use>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="firewatcherCriterion__bottom">
-                                <div class="firewatcherCriterion__bottom--text">
-                                    <div class="title">Firewatcher</div>
-                                    <div class="text">Prevent a forest fire</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="firewatcherCriterion firewatcherCriterions__no_wifi">
-
-                            <div class="firewatcherCriterion__top">
-                                <div class="criterionImageCircle hideImageCircle">
-                                    <svg class="firewatcherCriterion__top--imageContainer">
-                                        <use xlink:href="#waste"></use>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="firewatcherCriterion__bottom">
-                                <div class="firewatcherCriterion__bottom--text">
-                                    <div class="title">Waste</div>
-                                    <div class="text">Prevent pollution</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="firewatcherCriterion firewatcherCriterions__walker">
-
-                            <div class="firewatcherCriterion__top">
-                                <div class="criterionImageCircle hideImageCircle">
-                                    <svg class="firewatcherCriterion__top--imageContainer">
-                                        <use xlink:href="#poaching"></use>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="firewatcherCriterion__bottom">
-                                <div class="firewatcherCriterion__bottom--text">
-                                    <div class="title">Poaching</div>
-                                    <div class="text">Struggle against poaching</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="firewatcherCriterion firewatcherCriterions__nature">
-
-                            <div class="firewatcherCriterion__top">
-                                <div class="criterionImageCircle hideImageCircle">
-                                    <svg class="firewatcherCriterion__top--imageContainer">
-                                        <use xlink:href="#wildlife"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="firewatcherCriterion__bottom">
-                                <div class="firewatcherCriterion__bottom--text">
-                                    <div class="title">Wildlife</div>
-                                    <div class="text">Protect the wildlife</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="firewatcherCriterion firewatcherCriterions__solitary">
-
-                            <div class="firewatcherCriterion__top">
-                                <div class="criterionImageCircle hideImageCircle">
-                                    <svg class="firewatcherCriterion__top--imageContainer">
-                                        <use xlink:href="#flora"></use>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="firewatcherCriterion__bottom">
-                                <div class="firewatcherCriterion__bottom--text">
-                                    <div class="title">Flora</div>
-                                    <div class="text">Protect the flora</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="firewatcherCriterion firewatcherCriterions__observation">
-
-                            <div class="firewatcherCriterion__top">
-                                <div class="criterionImageCircle hideImageCircle">
-                                    <svg class="firewatcherCriterion__top--imageContainer">
-                                        <use xlink:href="#hiking_trail"></use>
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="firewatcherCriterion__bottom">
-                                <div class="firewatcherCriterion__bottom--text">
-                                    <div class="title">Hiking trail</div>
-                                    <div class="text">Maintain the hiking trails</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="views__homeLogo hidden">
+                    <svg>
+                        <use xlink:href="#firewatch_logo"></use>
+                    </svg>
                 </div>
+                <!-- gets you to tourist section -->
+                <label for="view1" class="views__homeLink numb1">Discover the parc</label>
+                <!-- gets you to firewatcher section -->
+                <div class="home__firewatcher">Learn about our Firewatchers</div>
             </div>
-            <!-- #Home  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-            <div class="homeViewLine viewsLine">
-                <div class="homeViewLine__view view">
-                    <div class="home">
-                        <div class="home__title hidden">
-                            <h2>YOSEMITE</h2>
-                            <h3>NATIONAL PARK</h3>
-                        </div>
-                        <div class="home__logo hidden">
-                            <svg>
-                                <use xlink:href="#firewatch_logo"></use>
-                            </svg>
-                        </div>
-                        <div class="home__tourist">Discover the parc</div>
-                        <div class="home__firewatcher">Learn about our Firewatchers</div>
-                    </div>
-                </div>
-            </div>
-            <!-- #Tourists (right)  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        </section>
+        <!--_____________________________________________________________________________________________________________________________________ -->
+                                                            <!-- tourist views -->
+        <!--_____________________________________________________________________________________________________________________________________ -->
+        <section class="views__view views__view-view1">
             <div class="touristsViewsLine viewsLine">
+                <div class="progressive_background"></div>
                 <div class="touristsViewsLine__view touristsViewsLine__view3 view">
                     <div class="tourists">
                         <div class="tourists__invitation">
@@ -308,186 +83,233 @@
                             <p>PARC IN USA</p>
                         </div>
                     </div>
+
                     <div class="locations">
-                    <div class="locations__image">
-                        <img srcset="medias/images/locations-small/locations-tunnelview-small.png 320w,
-                        medias/images/locations-medium/locations-tunnelview-medium.png 640w,
-                        medias/images/locations-large/locations-tunnelview-large.png 1024w"
-                        sizes="(max-width: 480px) 33.3vw"
-                        src="locations-tunnelview-small"
-                        alt="Tunnel View"/>
-                    </div>
-                    <div class="locations__description">
-                        <h3>Tunnel View</h3>
-                        <p>Tunnel view is a georgous panorama view of the yosemite valley. It is a stunning first sight upon exiting the Yosemite Valley long and dark tunnel.</p>
-                    </div>
 
-                    <div class="locations__image">
-                        <img srcset="medias/images/locations-small/locations-bridaveilfalls-small.png 320w,
-                        medias/images/locations-medium/locations-bridaveilfalls-medium.png 640w,
-                        medias/images/locations-large/locations-bridaveilfalls-large.png 1024w"
-                        src="locations-bridalveilfalls-small"
-                        sizes="(max-width: 480px) 33.3vw"
-                        alt="Bridalveil Falls"/>
-                    </div>
-                    <div class="locations__description">
-                        <h3>Bridalveil Falls</h3>
-                        <p>It's famous for the mist that wafts off it when the breezes blow and which, according to the poetic, isolation-addled souls who get to name waterfalls, resembles a bridal veil. Hanging out at the base of the falls during peak runoff can be akin to taking a shower in a tornado, sans the flying cows.</p>
-                    </div>
+                        <div class="location hideImage">
+                            <div class="locations__image">
+                                <img srcset="medias/images/locations-small/locations-tunnelview-small.png 320w,
+                                medias/images/locations-medium/locations-tunnelview-medium.png 640w,
+                                medias/images/locations-large/locations-tunnelview-large.png 1024w"
+                                    sizes="(max-width: 480px) 33.3vw"
+                                    src="locations-tunnelview-small"
+                                    alt="Tunnel View"/>
+                            </div>
+                            <div class="locations__description">
+                                <h3>Tunnel View</h3>
+                                <p>Tunnel view is a georgous panorama view of the yosemite valley. It is a stunning first sight upon exiting the Yosemite Valley long and dark tunnel.</p>
+                            </div>
+                        </div>
 
-                    <div class="locations__image">
-                        <img srcset="medias/images/locations-small/locations-cathedral-small.png 320w,
-                        medias/images/locations-medium/locations-cathedral-medium.png 640w,
-                        medias/images/locations-large/locations-cathedral-large.png 1024w"
-                        src="locations-cathedral-small"
-                        sizes="(max-width: 480px) 33.3vw"
-                        alt="Cathedral Rocks"/>
-                    </div>
-                    <div class="locations__description">
-                        <h3>Cathedral Rocks</h3>
-                        <p>The Cathedral Rocks are a prominent collection of cliffs with 3 main summits. These rock features were the scene of some of the first serious rock climbing done in the Sierra during the 1930s.</p>
-                    </div>
+                        <div class="location hideImage">
+                            <div class="locations__image">
+                                <img srcset="medias/images/locations-small/locations-bridaveilfalls-small.png 320w,
+                                medias/images/locations-medium/locations-bridaveilfalls-medium.png 640w,
+                                medias/images/locations-large/locations-bridaveilfalls-large.png 1024w"
+                                    src="locations-bridalveilfalls-small"
+                                    sizes="(max-width: 480px) 33.3vw"
+                                    alt="Bridalveil Falls"/>
+                            </div>
+                            <div class="locations__description">
+                                <h3>Bridalveil Falls</h3>
+                                <p>It's famous for the mist that wafts off it when the breezes blow and which, according to the poetic, isolation-addled souls who get to name waterfalls, resembles a bridal veil. Hanging out at the base of the falls during peak runoff can be akin to taking a shower in a tornado, sans the flying cows.</p>
+                            </div>
+                        </div>
+                        <div class="location hideImage">
+                            <div class="locations__image">
+                                <img srcset="medias/images/locations-small/locations-cathedral-small.png 320w,
+                                medias/images/locations-medium/locations-cathedral-medium.png 640w,
+                                medias/images/locations-large/locations-cathedral-large.png 1024w"
+                                    src="locations-cathedral-small"
+                                    sizes="(max-width: 480px) 33.3vw"
+                                    alt="Cathedral Rocks"/>
+                            </div>
+                            <div class="locations__description">
+                                <h3>Cathedral Rocks</h3>
+                                <p>The Cathedral Rocks are a prominent collection of cliffs with 3 main summits. These rock features were the scene of some of the first serious rock climbing done in the Sierra during the 1930s.</p>
+                            </div>
+                        </div>
 
-                    <div class="locations__image">
-                        <img srcset="medias/images/locations-small/locations-elcapitan-small.png 320w,
-                        medias/images/locations-medium/locations-elcapitan-medium.png 640w,
-                        medias/images/locations-large/locations-elcapitan-large.png 1024w"
-                        src="locations-elcapitan-small"
-                        sizes="(max-width: 480px) 33.3vw"
-                        alt="El capitan"/>
-                    </div>
-                    <div class="locations__description">
-                        <h3>El capitan</h3>
-                        <p>El Capitan is an impressive vertical rock formation that extends on 900m. It is one of the world’s favorite challenges for rock climbers and BASE jumpers. It was named El Capitan by the Mariposa Battalion. </p>
-                    </div>
+                        <div class="location hideImage">
+                            <div class="locations__image">
+                                <img srcset="medias/images/locations-small/locations-elcapitan-small.png 320w,
+                                medias/images/locations-medium/locations-elcapitan-medium.png 640w,
+                                medias/images/locations-large/locations-elcapitan-large.png 1024w"
+                                    src="locations-elcapitan-small"
+                                    sizes="(max-width: 480px) 33.3vw"
+                                    alt="El capitan"/>
+                            </div>
+                            <div class="locations__description">
+                                <h3>El capitan</h3>
+                                <p>El Capitan is an impressive vertical rock formation that extends on 900m. It is one of the world’s favorite challenges for rock climbers and BASE jumpers. It was named El Capitan by the Mariposa Battalion. </p>
+                            </div>
+                        </div>
+                        <div class="location hideImage">
+                            <div class="locations__image">
+                                <img srcset="medias/images/locations-small/locations-horsetailfalls-small.png 320w,
+                                medias/images/locations-medium/locations-horsetailfalls-medium.png 640w,
+                                medias/images/locations-large/locations-horsetailfalls-large.png 1024w"
+                                    src="locations-horsetailfalls-small"
+                                    sizes="(max-width: 480px) 33.3vw"
+                                    alt="Horsetail Falls"/>
+                            </div>
+                            <div class="locations__description">
+                                <h3>Horsetail Falls</h3>
+                                <p>Horsetail Fall is a seasonal waterfall that flows in the winter and early spring. The fall occurs on the east side of El Capitan. If Horsetail Fall is flowing in February and the weather conditions are just right, the setting sun illuminates the waterfall, making it glow orange and red. This natural phenomenon is often referred to as the "Firefall", a name that pays homage to the manmade Firefall that once took place in Yosemite.</p>
+                            </div>
+                        </div>
 
-                    <div class="locations__image">
-                        <img srcset="medias/images/locations-small/locations-horsetailfalls-small.png 320w,
-                        medias/images/locations-medium/locations-horsetailfalls-medium.png 640w,
-                        medias/images/locations-large/locations-horsetailfalls-large.png 1024w"
-                        src="locations-horsetailfalls-small"
-                        sizes="(max-width: 480px) 33.3vw"
-                        alt="Horsetail Falls"/>
-                    </div>
-                    <div class="locations__description">
-                        <h3>Horsetail Falls</h3>
-                        <p>Horsetail Fall is a seasonal waterfall that flows in the winter and early spring. The fall occurs on the east side of El Capitan. If Horsetail Fall is flowing in February and the weather conditions are just right, the setting sun illuminates the waterfall, making it glow orange and red. This natural phenomenon is often referred to as the "Firefall", a name that pays homage to the manmade Firefall that once took place in Yosemite.</p>
-                    </div>
+                        <div class="location hideImage">
+                            <div class="locations__image">
+                                <img srcset="medias/images/locations-small/locations-threebrothers-small.png 320w,
+                                medias/images/locations-medium/locations-threebrothers-medium.png 640w,
+                                medias/images/locations-large/locations-threebrothers-large.png 1024w"
+                                    src="locations-threebrothers-small"
+                                    sizes="(max-width: 480px) 33.3vw"
+                                    alt="Three Brothers"/>
+                            </div>
+                            <div class="locations__description">
+                                <h3>Three Brothers</h3>
+                                <p>The three brothers is a rock formation located east of of El Capitan and consisting of three peaks, the main of the uppermost Eagle Peak, which gives a breathtaking view of the Yosemite Park.</p>
+                            </div>
+                        </div>
 
-                    <div class="locations__image">
-                        <img srcset="medias/images/locations-small/locations-threebrothers-small.png 320w,
-                        medias/images/locations-medium/locations-threebrothers-medium.png 640w,
-                        medias/images/locations-large/locations-threebrothers-large.png 1024w"
-                        src="locations-threebrothers-small"
-                        sizes="(max-width: 480px) 33.3vw"
-                        alt="Three Brothers"/>
-                    </div>
-                    <div class="locations__description">
-                        <h3>Three Brothers</h3>
-                        <p>The three brothers is a rock formation located east of of El Capitan and consisting of three peaks, the main of the uppermost Eagle Peak, which gives a breathtaking view of the Yosemite Park.</p>
-                    </div>
+                        <div class="location hideImage">
+                            <div class="locations__image">
+                                <img srcset="medias/images/locations-small/locations-yosemitefalls-small.png 320w,
+                                medias/images/locations-medium/locations-yosemitefalls-medium.png 640w,
+                                medias/images/locations-large/locations-yosemitefalls-large.png 1024w"
+                                    src="locations-yosemitefalls-small"
+                                    sizes="(max-width: 480px) 33.3vw"
+                                    alt="Yosemite Falls"/>
+                            </div>
+                            <div class="locations__description">
+                                <h3>Yosemite Falls</h3>
+                                <p>Yosemite falls is the highest waterfall in Yosemite Park dropping a total of 2,425 feet from the uppermost part to the bottom. It is a major attraction of the park, especially in late spring when the water flow is at its peak.</p>
+                            </div>
+                        </div>
 
-                    <div class="locations__image">
-                        <img srcset="medias/images/locations-small/locations-yosemitefalls-small.png 320w,
-                        medias/images/locations-medium/locations-yosemitefalls-medium.png 640w,
-                        medias/images/locations-large/locations-yosemitefalls-large.png 1024w"
-                        src="locations-yosemitefalls-small"
-                        sizes="(max-width: 480px) 33.3vw"
-                        alt="Yosemite Falls"/>
-                    </div>
-                    <div class="locations__description">
-                        <h3>Yosemite Falls</h3>
-                        <p>Yosemite falls is the highest waterfall in Yosemite Park dropping a total of 2,425 feet from the uppermost part to the bottom. It is a major attraction of the park, especially in late spring when the water flow is at its peak.</p>
-                    </div>
+                        <div class="location hideImage">
+                            <div class="locations__image">
+                                <img srcset="medias/images/locations-small/locations-glacierpoint-small.png 320w,
+                                medias/images/locations-medium/locations-glacierpoint-medium.png 640w,
+                                medias/images/locations-large/locations-glacierpoint-large.png 1024w"
+                                    src="locations-glacierpoint-small"
+                                    sizes="(max-width: 480px) 33.3vw"
+                                    alt="Glacier Point"/>
+                            </div>
+                            <div class="locations__description">
+                                <h3>Glacier Point</h3>
+                                <p>Glacier Point is an overlook with a commanding view of Yosemite Valley, Half Dome, Yosemite Falls, and Yosemite’s high country.</p>
+                            </div>
+                        </div>
 
-                    <div class="locations__image">
-                        <img srcset="medias/images/locations-small/locations-glacierpoint-small.png 320w,
-                        medias/images/locations-medium/locations-glacierpoint-medium.png 640w,
-                        medias/images/locations-large/locations-glacierpoint-large.png 1024w"
-                        src="locations-glacierpoint-small"
-                        sizes="(max-width: 480px) 33.3vw"
-                        alt="Glacier Point"/>
-                    </div>
-                    <div class="locations__description">
-                        <h3>Glacier Point</h3>
-                        <p>Glacier Point is an overlook with a commanding view of Yosemite Valley, Half Dome, Yosemite Falls, and Yosemite’s high country.</p>
-                    </div>
+                        <div class="location hideImage">
+                            <div class="locations__image">
+                                <img srcset="medias/images/locations-small/locations-royalarches-small.png 320w,
+                                medias/images/locations-medium/locations-royalarches-medium.png 640w,
+                                medias/images/locations-large/locations-royalarches-large.png 1024w"
+                                    src="locations-royalarches-small"
+                                    sizes="(max-width: 480px) 33.3vw"
+                                    alt="Royal Arches"/>
+                            </div>
+                            <div class="locations__description">
+                                <h3>Royal Arches</h3>
+                                <p>The Royal Arches refers to a cliff containing natural occurring granite exfoliation arches, located below North Dome and rising above Yosemite Valley. The Royal Arches, like much of the Yosemite area, feature a great choice of rock climbing sites.</p>
+                            </div>
+                        </div>
 
-                    <div class="locations__image">
-                        <img srcset="medias/images/locations-small/locations-royalarches-small.png 320w,
-                        medias/images/locations-medium/locations-royalarches-medium.png 640w,
-                        medias/images/locations-large/locations-royalarches-large.png 1024w"
-                        src="locations-royalarches-small"
-                        sizes="(max-width: 480px) 33.3vw"
-                        alt="Royal Arches"/>
-                    </div>
-                    <div class="locations__description">
-                        <h3>Royal Arches</h3>
-                        <p>The Royal Arches refers to a cliff containing natural occurring granite exfoliation arches, located below North Dome and rising above Yosemite Valley. The Royal Arches, like much of the Yosemite area, feature a great choice of rock climbing sites.</p>
-                    </div>
+                        <div class="location hideImage">
+                            <div class="locations__image">
+                                <img srcset="medias/images/locations-small/locations-mirrorlake-small.png 320w,
+                                medias/images/locations-medium/locations-mirrorlake-medium.png 640w,
+                                medias/images/locations-large/locations-mirrorlake-large.png 1024w"
+                                    src="locations-mirrorlake-small"
+                                    sizes="(max-width: 480px) 33.3vw"
+                                    alt="Mirror Lake"/>
+                            </div>
+                            <div class="locations__description">
+                                <h3>Mirror Lake</h3>
+                                <p>Mirror Lake is a small, seasonal lake. Situated in Tenaya Canyon directly between North Dome and Half Dome, it is the last remnant of a large glacial lake that once filled most of Yosemite Valley at the end of the last Ice Age, and is close to disappearing due to sediment accumulation.</p>
+                            </div>
+                        </div>
 
-                    <div class="locations__image">
-                        <img srcset="medias/images/locations-small/locations-mirrorlake-small.png 320w,
-                        medias/images/locations-medium/locations-mirrorlake-medium.png 640w,
-                        medias/images/locations-large/locations-mirrorlake-large.png 1024w"
-                        src="locations-mirrorlake-small"
-                        sizes="(max-width: 480px) 33.3vw"
-                        alt="Mirror Lake"/>
-                    </div>
-                    <div class="locations__description">
-                        <h3>Mirror Lake</h3>
-                        <p>Mirror Lake is a small, seasonal lake. Situated in Tenaya Canyon directly between North Dome and Half Dome, it is the last remnant of a large glacial lake that once filled most of Yosemite Valley at the end of the last Ice Age, and is close to disappearing due to sediment accumulation.</p>
-                    </div>
+                        <div class="location hideImage">
+                            <div class="locations__image">
+                                <img srcset="medias/images/locations-small/locations-vernalfalls-small.png 320w,
+                                medias/images/locations-medium/locations-vernalfalls-medium.png 640w,
+                                medias/images/locations-large/locations-vernalfalls-large.png 1024w"
+                                    src="locations-vernalfalls-small"
+                                    sizes="(max-width: 480px) 33.3vw"
+                                    alt="Vernal Falls"/>
+                            </div>
+                            <div class="locations__description">
+                                <h3>Vernal Falls</h3>
+                                <p>Vernal Fall is a 96.6 m waterfall on the Merced River just downstream of Nevada Fall. Vernal Fall is clearly visible at a distance, from Glacier Point, as well as close up, along the Mist Trail.</p>
+                            </div>
+                        </div>
 
-                    <div class="locations__image">
-                        <img srcset="medias/images/locations-small/locations-vernalfalls-small.png 320w,
-                        medias/images/locations-medium/locations-vernalfalls-medium.png 640w,
-                        medias/images/locations-large/locations-vernalfalls-large.png 1024w"
-                        src="locations-vernalfalls-small"
-                        sizes="(max-width: 480px) 33.3vw"
-                        alt="Vernal Falls"/>
-                    </div>
-                    <div class="locations__description">
-                        <h3>Vernal Falls</h3>
-                        <p>Vernal Fall is a 96.6 m waterfall on the Merced River just downstream of Nevada Fall. Vernal Fall is clearly visible at a distance, from Glacier Point, as well as close up, along the Mist Trail.</p>
-                    </div>
+                        <div class="location hideImage">
+                            <div class="locations__image">
+                                <img srcset="medias/images/locations-small/locations-nevadafalls-small.png 320w,
+                                medias/images/locations-medium/locations-nevadafalls-medium.png 640w,
+                                medias/images/locations-large/locations-nevadafalls-large.png 1024w"
+                                    src="locations-nevadafalls-small"
+                                    sizes="(max-width: 480px) 33.3vw"
+                                    alt="Nevada Falls"/>
+                            </div>
+                            <div class="locations__description">
+                                <h3>Nevada Falls</h3>
+                                <p>Nevada Fall is a 181 m high waterfall on the Merced River. The waterfall is widely recognized by its "bent" shape, in which the water free-falls for roughly the first third of its length to a steep slick-rock slope. This mid-fall impact of the water on the cliff face creates a turbulent, whitewater appearance in the falls and produces a great deal of mist which covers a wide radius, which led to its current name.</p>
+                            </div>
+                        </div>
 
-                    <div class="locations__image">
-                        <img srcset="medias/images/locations-small/locations-nevadafalls-small.png 320w,
-                        medias/images/locations-medium/locations-nevadafalls-medium.png 640w,
-                        medias/images/locations-large/locations-nevadafalls-large.png 1024w"
-                        src="locations-nevadafalls-small"
-                        sizes="(max-width: 480px) 33.3vw"
-                        alt="Nevada Falls"/>
+                        <div class="location hideImage">
+                            <div class="locations__image">
+                                <img srcset="medias/images/locations-small/locations-halfdome-small.png 320w,
+                                medias/images/locations-medium/locations-halfdome-medium.png 640w,
+                                medias/images/locations-large/locations-halfdome-large.png 1024w"
+                                    src="locations-halfdome-small"
+                                    sizes="(max-width: 480px) 33.3vw"
+                                    alt="Half Dome"/>
+                            </div>
+                            <div class="locations__description">
+                                <h3>Half Dome</h3>
+                                <p>Half Dome is a granite dome at the eastern end of Yosemite Valley. It is a well-known rock formation in the park, named for its distinct shape. One side is a sheer face while the other three sides are smooth and round, making it appear like a dome cut in half.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="locations__description">
-                        <h3>Nevada Falls</h3>
-                        <p>Nevada Fall is a 181 m high waterfall on the Merced River. The waterfall is widely recognized by its "bent" shape, in which the water free-falls for roughly the first third of its length to a steep slick-rock slope. This mid-fall impact of the water on the cliff face creates a turbulent, whitewater appearance in the falls and produces a great deal of mist which covers a wide radius, which led to its current name.</p>
-                    </div>
-
-                    <div class="locations__image">
-                        <img srcset="medias/images/locations-small/locations-halfdome-small.png 320w,
-                        medias/images/locations-medium/locations-halfdome-medium.png 640w,
-                        medias/images/locations-large/locations-halfdome-large.png 1024w"
-                        src="locations-halfdome-small"
-                        sizes="(max-width: 480px) 33.3vw"
-                        alt="Half Dome"/>
-                    </div>
-                    <div class="locations__description">
-                        <h3>Half Dome</h3>
-                        <p>Half Dome is a granite dome at the eastern end of Yosemite Valley. It is a well-known rock formation in the park, named for its distinct shape. One side is a sheer face while the other three sides are smooth and round, making it appear like a dome cut in half.</p>
-                    </div>
-
-                    </div>
-                </div>
-                <div class="touristsViewsLine__view touristsViewsLine__view1 view">
                 </div>
             </div>
-
-        </div>
+        </section>
+        <section class="views__view views__view-view2"></section>
+        <section class="views__view views__view-view3"></section>
     </section>
-    <!-- all svgs - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -->
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:0; height:0; font-size:0;">
+    <!--_____________________________________________________________________________________________________________________________________ -->
+        
+                                                        <!-- MENU -->
+
+        <!--_____________________________________________________________________________________________________________________________________ -->
+        
+        <div class="menu">
+            <div class="menu__text">
+                <label for="view0" class="menu__link numb0">Home</label>
+                <label for="view1" class="menu__link numb1">Discover the parc</label>
+                <label for="view1" class="menu__link numb1">Discover the job of Firewatcher</label>
+            </div>
+        </div>
+        <div class="menu__burger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    <!--_____________________________________________________________________________________________________________________________________ -->
+        
+                                                        <!-- SVGS -->
+
+    <!--_____________________________________________________________________________________________________________________________________ -->
+       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:0; height:0; font-size:0;">
         <defs>
             <symbol id="firewatch_logo" viewBox="8 0 90 70">
                 <path class="st0" d="M12,24.2l-0.6-0.3c-3.7-2-6.7-5.7-8.8-10.7c-1.5-3.7-2-6.8-2-6.9L0.4,5l1.3-0.1c4.4-0.3,9.5-4.1,9.6-4.1L12,0.2
