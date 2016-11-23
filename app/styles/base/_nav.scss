@@ -29,6 +29,10 @@
     transition: all 0.3s ease-in-out;
 }
 /* each slide background color */ 
+.views__view-view-1 {
+    background: #00bcd7;
+    left: -100%
+}
 .views__view-view0 {
     background: #00bcd7;
     left: 0;
@@ -47,6 +51,9 @@
 }
 
 /* views control sliding effect */
+.view-radio-1:checked ~ .views__view {
+  transform: translateX(100%);
+}
 .view-radio0:checked ~ .views__view {
   transform: translateX(0%);
 }
@@ -111,9 +118,11 @@
 }
 
 /* next and previous will be  active when slider moving*/
+.view-radio-1:checked ~ .views_control-next .numb0,
 .view-radio0:checked ~ .views_control-next .numb1, 
 .view-radio1:checked ~ .views_control-next .numb2, 
-.view-radio2:checked ~ .views_control-next .numb3, 
+.view-radio2:checked ~ .views_control-next .numb3,
+.view-radio0:checked ~ .views_control-previous .numb-1,  
 .view-radio1:checked ~ .views_control-previous .numb0, 
 .view-radio2:checked ~ .views_control-previous .numb1, 
 .view-radio3:checked ~ .views_control-previous .numb2 {
@@ -122,6 +131,7 @@
 }
  
 /* css for active current pagination */
+.view-radio-1:checked ~ .views_sliderPagination .page-1,
 .view-radio0:checked ~ .views_sliderPagination .page0, 
 .view-radio1:checked ~ .views_sliderPagination .page1, 
 .view-radio2:checked ~ .views_sliderPagination .page2, 

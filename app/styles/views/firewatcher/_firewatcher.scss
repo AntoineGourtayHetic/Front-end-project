@@ -1,23 +1,135 @@
-.firewatcher {
+.views__firewatch1ViewLine {
+  background-image : url(../../../medias/images/Yosemite_Valley-Large.gif);
+  background-size: cover;
+  position: relative;
   width           : 100vw;
-  height          : 90vh;
-  background-image: url(../../../../medias/images/home_firewatcher.jpg);
-  background-size : cover;
-
-  @include flexCenterTitle();
-
-  .firewatcher__invitation {
-
-    @include futuraBoldTitle();
-    font-size      : 3vw;
-    width          : 60vw;
-    height         : 90vh;
-    text-align     : center;
-    display        : flex;
-    align-items    : center;
-    justify-content: space-around;
-    flex-direction : column;
-
+  height          : 100vh;
+  display         : flex;
+  flex-direction  : column;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items     : center;
+  justify-content : center;
+  
+  &:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    opacity: 0.4;
   }
+}
+/* Title */
+.views__firewatch1Title {
+  width: 60vw;  
+  font-family     : "FuturaBold", sans-serif;
+  color           : #FFFFFF;
+  align-items     : center;
+  text-align: center;
+  //show with transition
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1s ease-in-out;
+  &.hidden {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  h2 {
+     /* Landscape phones and down */
+    @media (max-width: 480px) {
+        font-size: 8vw;
+        margin-bottom: 1em;
+    }
+    /* Landscape phone to portrait tablet */
+    @media (min-width: 481px) and (max-width: 767px) {
+        font-size:10vw;
+    }
+    /* Portrait tablet to landscape and desktop */
+    @media (min-width: 768px) and (max-width: 1199px) {
+       font-size:9vw;
+    }
+    /* Large desktop */
+    @media (min-width: 1200px) {
+        font-size: 5vw;
+        margin-bottom: 1em;
+    }
+  }
+  p {
+     /* Landscape phones and down */
+    @media (max-width: 480px) {
+       font-family: 'FuturaMedium';
+       line-height: 1.2em;
+       font-size: 1.2em;
+    }
+    /* Landscape phone to portrait tablet */
+    @media  (min-width: 481px) and (max-width: 767px) {
+        font-family: 'FuturaMedium';
+        font-size: 2em;
+        line-height: 1.5em;
+        margin-left:1em;
+    }
+    /* Portrait tablet to landscape and desktop */
+    @media (min-width: 768px) and (max-width: 1199px) {
+       font-family: 'FuturaMedium';
+       font-size: 2em;
+       line-height: 1.5em;
+       margin-left:1.5em;
+    }  
+    /* Large desktop */
+    @media (min-width: 1200px) {
+       font-family: 'FuturaMedium';
+       line-height: 1.5em;
+       font-size: 2em;
+    }
+  }
+}
 
+/* links */
+.views__firewatch1Link {
+  color              : #fff;
+  z-index            : 1;
+  margin-bottom      : 1em; 
+  cursor             : pointer;
+  font-family        : "FuturaBold", sans-serif;
+  position           : relative;
+
+  /* Landscape phones and down */
+    @media (max-width: 480px) {
+        font-size : 6vw;
+    }
+    /* Landscape phone to portrait tablet */
+    @media  (min-width: 481px) and (max-width: 767px) {
+        font-size : 4vw;
+    }
+    /* Portrait tablet to landscape and desktop */
+    @media (min-width: 768px) and (max-width: 1199px) {
+       font-size : 3vw;
+    }
+
+    /* Large desktop */
+    @media (min-width: 1200px) {
+        font-size : 2vw;
+    }
+  
+  //underline
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out 0s;
+  }
+  //make underline appear on hover
+  &:hover {
+    &:before {
+      transform: scaleX(1);
+    }
+  }  
 }

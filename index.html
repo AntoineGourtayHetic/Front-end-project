@@ -18,6 +18,7 @@
                                                         <!-- NAV ELEMENTS -->
 
         <!--_____________________________________________________________________________________________________________________________________ -->
+        <input type="radio" name="view" class="view-radio-1" id="view-1">
         <input type="radio" name="view" class="view-radio0" checked id="view0">
         <input type="radio" name="view" class="view-radio1" id="view1">
         <input type="radio" name="view" class="view-radio2" id="view2">
@@ -25,6 +26,7 @@
     
         <!-- rounds -->
         <div class="views_sliderPagination">
+            <label for="view-1" class="page-1"></label> 
             <label for="view0" class="page0"></label> 
             <label for="view1" class="page1"></label>
             <label for="view2" class="page2"></label>
@@ -32,6 +34,7 @@
         </div>
         <!-- arrow next -->
         <div class="views_control views_control-next">
+            <label for="view-1" class="numb-1"><i class="fa fa-angle-left"></i></label>
             <label for="view0" class="numb0"><i class="fa fa-angle-right"></i></label>
             <label for="view1" class="numb1"><i class="fa fa-angle-right"></i></label>
             <label for="view2" class="numb2"><i class="fa fa-angle-right"></i></label>
@@ -39,6 +42,7 @@
         </div>
         <!-- arrow previous -->
         <div class="views_control views_control-previous">
+            <label for="view-1" class="numb-1"><i class="fa fa-angle-left"></i></label>
             <label for="view0" class="numb0"><i class="fa fa-angle-left"></i></label>
             <label for="view1" class="numb1"><i class="fa fa-angle-left"></i></label>
             <label for="view2" class="numb2"><i class="fa fa-angle-left"></i></label>
@@ -49,6 +53,17 @@
                                                         <!-- VIEWS -->
 
         <!--_____________________________________________________________________________________________________________________________________ -->
+       <!--_____________________________________________________________________________________________________________________________________ -->
+                                                            <!-- firewatchers views -->
+        <!--_____________________________________________________________________________________________________________________________________ -->
+        <section class="views__view views__view-view-1">
+            <div class="views__firewatch1ViewLine">
+                <div class="views__firewatch1Title">
+                    <h2>What does it means to be a Firewatcher ?</h2>
+                    <p>Forest Firewatch are men and women who work from fire towers above timberlines to help prevent wildland fires.</p>
+                </div>
+            </div>
+        </section>
         <!--_____________________________________________________________________________________________________________________________________ -->
                                                                 <!-- home -->
         <!--_____________________________________________________________________________________________________________________________________ -->
@@ -66,7 +81,7 @@
                 <!-- gets you to tourist section -->
                 <label for="view1" class="views__homeLink numb1">Discover the parc</label>
                 <!-- gets you to firewatcher section -->
-                <div class="home__firewatcher">Learn about our Firewatchers</div>
+                <label for="view-1" class="views__homeLink numb-1">Learn about the Firewatch</label>
             </div>
         </section>
         <!--_____________________________________________________________________________________________________________________________________ -->
@@ -289,13 +304,12 @@
         
                                                         <!-- MENU -->
 
-        <!--_____________________________________________________________________________________________________________________________________ -->
-        
+        <!--_____________________________________________________________________________________________________________________________________ --> 
         <div class="menu">
             <div class="menu__text">
                 <label for="view0" class="menu__link numb0">Home</label>
                 <label for="view1" class="menu__link numb1">Discover the parc</label>
-                <label for="view1" class="menu__link numb1">Discover the job of Firewatcher</label>
+                <label for="view-1" class="menu__link numb-1">Discover the job of Firewatcher</label>
             </div>
         </div>
         <div class="menu__burger">
