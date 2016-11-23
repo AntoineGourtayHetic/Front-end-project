@@ -1,21 +1,24 @@
 .tourists {
-  width: 100vw;
-  height: calc(100vh - 70px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+
+  width           : 100vw;
+  height          : calc(100vh - 70px);
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  justify-content : flex-end;
+  background-image: url(../../../../medias/images/home_tourists_bg.jpg);
+  background-size : cover;
 
   .tourists__invitation {
-    width: 60vw;
-    height: 60vh;
-    color: #FFFFFF;
-    font-size: 8vw;
-    display: flex;
-    align-items: center;
+    width          : 60vw;
+    height         : 60vh;
+    color          : #FFFFFF;
+    font-size      : 8vw;
+    display        : flex;
+    align-items    : center;
     justify-content: center;
-    flex-direction: column;
-    font-family: "FuturaBold", sans-serif;
+    flex-direction : column;
+    font-family    : "FuturaBold", sans-serif;
 
     @media (max-width: 480px) {
 

@@ -1,5 +1,14 @@
 .touristsViewsLine {
 
+  .progressive_background {
+    width           : 90vw;
+    height          : 95vh;
+    margin          : 0 10vw;
+    z-index         : -1;
+    background-color: orange;
+    position        : fixed;
+  }
+
   .touristsViewsLine__view {
     @include viewsLine();
   }
@@ -15,8 +24,6 @@
   }
 
   .touristsViewsLine__view3 {
-    background-image: url(../../../../medias/images/home_tourists_bg.jpg);
-    background-size : cover;
     overflow: scroll;
   }
 

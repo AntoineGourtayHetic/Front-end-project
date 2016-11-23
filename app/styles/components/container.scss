@@ -25,4 +25,12 @@ section.container {
     @include viewsLine();
   }
 
+  .hideImage {
+    opacity: 0;
+  }
+
+  .showImage {
+    opacity: 1;
+  }
+
 }
